@@ -1,0 +1,100 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+@theme{
+
+    --font-game: "Press Start 2P", system-ui;
+    --font-time: "Rajdhani", sans-serif;
+    --font-body: "Bricolage Grotesque", sans-serif;
+    --color-dull: #131010;
+    --body-color: #080c0d;
+    --primary-color: #ffff;
+    --secondary-color: oklch(70.5% 0.213 47.604);
+    --subtext-color: oklch(0.869 0.022 252.894);
+
+    --animate-wave: wave 1s ease-in-out infinite;
+
+    @keyframes wave {
+      0%,
+      100% {
+        transform: rotate(-8deg);
+      }
+      50% {
+        transform: rotate(8deg);
+      }
+    }
+  
+}
+
+.main-button{
+  position: relative;
+  align-self: center;
+  background-color: transparent;
+  background-image: none;
+  background-position: 0 90%;
+  background-repeat: repeat no-repeat;
+  background-size: 4px 3px;
+  border-radius: 15px 225px 255px 15px 15px 255px 225px 15px;
+  border-style: solid;
+  border-width: 2px;
+  box-shadow: rgba(206, 204, 204, 0.2) 15px 28px 25px -18px;
+  box-sizing: border-box;
+  color: #e6e3de;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 1rem;
+  line-height: 16px;
+  outline: none;
+  padding: .55rem;
+  text-decoration: none;
+  transition: all 235ms ease-in-out;
+  border-bottom-left-radius: 15px 255px;
+  border-bottom-right-radius: 225px 15px;
+  border-top-left-radius: 255px 15px;
+  border-top-right-radius: 15px 225px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  z-index: 100;
+}
+
+.main-button:hover {
+  box-shadow: rgba(179, 178, 178, 0.3) 2px 8px 8px -5px;
+  transform: translate3d(0, 2px, 0);
+}
+
+.main-button:focus {
+  box-shadow: rgba(180, 178, 178, 0.3) 2px 8px 4px -6px;
+}
+
+
+.inner_cursor{
+    position: fixed;
+    width: 6px;
+    height: 6px;
+    top: 0;
+    left: 0;
+    background: #eeee;
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    transition: .1s;
+    z-index: 1000;
+}
+
+.outer_cursor{
+    position: fixed;
+    width: 35px;
+    height: 35px;
+    top: 0;
+    left: 0;
+    border: 1px solid #eeee;
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    transition: .13s;
+    z-index: 1000;
+
+}

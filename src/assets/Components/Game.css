@@ -1,0 +1,78 @@
+.score-bar, .game-over-text{
+    font-family: var(--game-font);
+}
+
+.road-container {
+    position: absolute;
+    top: 100px;
+    display: flex;
+    width: 1600px; 
+}
+
+.road {
+    width: 800px;
+    height: 100px;
+}
+
+.cactus-active{
+    animation: animateCactus 2.5s linear infinite;
+}
+
+.road-active{
+    animation: animateRoad 1.5s linear infinite;
+}
+
+@keyframes animateRoad {
+    0%{
+        left: 0;
+    }
+    100%{
+        left: -300px;
+    }
+}
+
+
+@keyframes animateCactus {
+    0%{
+        right: -15px;
+    }
+    100%{
+        right: 100%;
+    }
+}
+
+.dino-jump {
+    animation: jump 0.5s linear;
+}
+  
+@keyframes jump {
+    0% { bottom: 168px; }
+    50% { bottom: 250px; }
+    100% { bottom: 168px; }
+}
+
+.clouds{
+    height: 50px;
+    position: absolute;
+    width: 100%;
+    top: 5px;
+}
+
+.clouds div{
+    position: absolute;
+    width: 50px;
+    height: 40px;
+    background: url('../Images/cloud.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    left: -200px;
+}
+
+.clouds div.cloud-active{
+    animation: cloudanimation 5s linear infinite;
+}
+
+@keyframes cloudanimation {
+    0% { left: -200px; }
+    100% { left: 2000px; }
+}
