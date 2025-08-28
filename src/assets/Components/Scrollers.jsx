@@ -11,7 +11,7 @@ const Scrollers = () => {
   return (
     <div className='relative overflow-hidden'>
         <div className='bg-white/8 w-full p-4 my-20 rotate-3'>
-            <Marquee speed={60} pauseOnHover={true} className='flex flex-row w-full text-white text-lg'>
+            <Marquee speed={60}  className='flex flex-row w-full text-white text-lg'>
                 <div className="inline-flex items-center">
                     {services.map((item, index) => (
                         <div key={index} className="flex items-center space-x-1">
@@ -23,7 +23,7 @@ const Scrollers = () => {
             </Marquee>
         </div>
         <div className='bg-black w-full p-4 my-20 absolute top-0 z-1 -rotate-3'>
-            <Marquee speed={60} pauseOnHover={true} direction="right" className='flex flex-row w-full text-white text-lg'>
+            <Marquee speed={60} direction="right" className='flex flex-row w-full text-white text-lg'>
                 <div className="inline-flex items-center">
                     {services.map((item, index) => (
                         <div key={index} className="flex items-center space-x-1">

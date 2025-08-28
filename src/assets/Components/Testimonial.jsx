@@ -34,34 +34,34 @@ const Testimonial = () => {
 
     return (
 
-        <div className='py-22'>
+        <div className='py-22 px-20'>
 
-            <h1 className='text-4xl text-[var(--primary-color)] font-bold text-center'>
-                Testimonal <span className='text-[var(--secondary-color)] font-bold'>what matters ?</span>
+            <h1 className='text-4xl text-[var(--primary-color)] font-normal text-left'>
+                Testimonal <span className='text-[var(--secondary-color)]'>what matters ?</span>
             </h1>
 
-            <Marquee speed={60} pauseOnHover={true} className='pt-20 px-28'>
-                <div className="flex gap-0">
+            <Marquee speed={60} direction={top} pauseOnHover={true} className='pt-10 px-28'>
+                <div className="flex">
                 {reviews.map((item, index) => (
                     <div
                     key={index}
                     onMouseEnter={() => setHoveredIndex(index)}
                     onMouseLeave={() => setHoveredIndex(null)}
-                    className={`w-[320px] h-auto border border-gray-900 bg-gray-200 rounded-xl p-5 transition duration-300 mx-5 ${
-                        hoveredIndex !== null && hoveredIndex !== index ? 'blur-sm scale-[.97] opacity-60' : 'blur-0'
+                    className={`w-[320px] h-auto border border-gray-900 bg-black/30 rounded-xl p-5 transition duration-300 mx-3 opacity-60  ${
+                        hoveredIndex !== null && hoveredIndex !== index ? 'blur-sm scale-[.97] opacity-30 ' : 'blur-0'
                     }`}
                     >
                     <div className='flex justify-between'>
                         <div className='flex gap-4 items-center'>
                         <img className='rounded-full w-12 h-12' src={reviewAvatar} alt="review-avatar" />
-                        <p className='text-md text-black leading-5'>
+                        <p className='text-md text-white leading-5'>
                             {item.name} <br />
-                            <span className='text-black text-sm font-light'>{item.username}</span>
+                            <span className='text-white text-sm font-light'>{item.username}</span>
                         </p>
                         </div>
                         <Linkedin className='text-[var(--secondary-color)]' />
                     </div>
-                    <p className='pt-6 text-sm font-normal text-black'>“{item.review}”</p>
+                    <p className='pt-6 text-sm font-normal text-gray-400'>“{item.review}”</p>
                     </div>
                 ))}
                 </div>

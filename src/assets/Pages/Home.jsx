@@ -3,10 +3,11 @@ import Navbar from '../Components/Navbar'
 import Main from '../Components/Main'
 import Header from '../Components/Header'
 import Scrollers from '../Components/Scrollers'
-import Parallex from '../Components/Parallex'
 import ChooseUs from '../Components/ChooseUs'
 import Testimonial from '../Components/Testimonial'
 import CTA from '../Components/CTA'
+import Footer from '../Components/Footer'
+import Services from '../Components/Services'
 
 
 const Home = () => {
@@ -16,10 +17,10 @@ const Home = () => {
         <Main/>
         <Navbar/>
         <Scrollers/>
-        <Parallex/>
-        <ChooseUs/>
+        <Services/>
         <Testimonial/>
         <CTA/>
+        <Footer/>
     </div>
   )
 }
