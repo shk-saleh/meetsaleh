@@ -6,7 +6,7 @@ const ChooseUs = () => {
 
     return (
         <div className='pt-22 px-28'>
-            <h1 className='text-4xl text-[var(--primary-color)] font-bold text-center'>Why to Choose <span className='text-[var(--secondary-color)] font-bold'>me ?</span></h1>
+            <h1 className='text-4xl text-(--primary-color) font-bold text-center'>Why to Choose <span className='text-[var(--secondary-color)] font-bold'>me ?</span></h1>
             <div className='flex flex-row w-full pt-20 pb-10 justify-center gap-6 items-center'>
                 <div className='flex flex-col items-center border border-gray-500 bg-white/5 rounded-2xl p-8 text-center'>
                     <Rocket className='w-16 h-16 my-10 text-[var(--secondary-color)] text-center stroke-1' />

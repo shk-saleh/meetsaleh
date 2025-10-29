@@ -1,6 +1,6 @@
 import React from 'react'
 import headshot from '../Images/personal-img.png'
-import { Hand, UsersRound } from "lucide-react";
+import { Hand, UsersRound, Facebook, Instagram, Linkedin, Github, SplinePointer, MousePointer2 } from "lucide-react";
 
 
 const Main = () => {
@@ -8,16 +8,19 @@ const Main = () => {
   return (
     <div className='relative flex justify-center gap-10 items-center z-1 min-h-[75vh] px-28'>
         <div>
-            <img src={headshot} className='border border-gray-500 bg-white/5 backdrop-blur-sm rounded-[10%] rotate-5 transition-all ease-linear hover:border-orange-500 hover:rotate-0' alt="personal-img" width="250px"/>
+            <img src={headshot} className='border border-gray-500 bg-white/5 backdrop-blur-sm rounded-[10%] rotate-5 transition-all ease-linear hover:border-orange-500 hover:rotate-0' alt="personal-img" width="300px"/>
         </div>
-        <div>
-          <div className='flex gap-2 pb-2'>
+        <div className='relative'>
+          <div className='flex gap-2 pb-4'>
               <button className='bg-white/8 border border-gray-700 rounded-2xl text-sm text-[var(--primary-color)] px-3 py-1'>Full Stack Engineer</button>
               <button className='bg-white/8 border border-gray-700 rounded-2xl text-sm text-[var(--primary-color)] px-3 py-1'>UI Designer</button>
           </div>
-          <span className='flex items-center gap-2 text-3xl text-[var(--primary-color)] pb-2'><Hand className='text-[var(--secondary-color)] animate-wave'/> I'm Muhammad Saleh.</span>
-          <h1 className='text-[60px] z-[-1] text-[var(--primary-color)] leading-none font-normal pb-2'>Build <span className='text-[var(--secondary-color)]'>Business Solutions </span><br /> that stand out!</h1>
-          <div className='flex gap-5 items-center h-10 pt-10'>
+          {/* <span className='flex items-center gap-2 text-3xl text-[var(--primary-color)] pb-2'><Hand className='text-[var(--secondary-color)] animate-wave'/> I'm Muhammad Saleh.</span> */}
+          {/* <h1 className='text-[70px] z-[-1] text-[var(--primary-color)] leading-none font-normal pb-2'>Build <span className='text-[var(--secondary-color)] '>Business Solutions </span><br /> that stand out!</h1> */}
+          <h1 className='text-[70px] z-[-1] text-[var(--primary-color)] leading-none font-normal pb-2'>Hi! I'm Muhammad Saleh <br/> Creative Designer or <span className='text-(--secondary-color)'>{"{Developer}"}</span></h1>
+          <MousePointer2 className='absolute top-42 right-82 w-10 h-10 text-yellow-400' />
+          <span className='text-lg text-(--subtext-color) font-light'>Building aesthetic and performance-driven SaaS interfaces that users love.</span>
+          <div className='flex gap-5 items-center h-10 pt-8'>
             <button class="main-button">
               <svg viewBox="0 0 24 24" class="arr-2" xmlns="http://www.w3.org/2000/svg">
                 <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path>
@@ -28,7 +31,12 @@ const Main = () => {
                 <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path>
               </svg>
             </button>
-            <p className='flex gap-2 text-[var(--primary-color)] text-md font-light py-4'><UsersRound className='text-[var(--secondary-color)] w-6 h-6'/> 10+ Trusted clients!</p>
+            <div className='flex items-start gap-4'>
+                  <Instagram className='hover:text-[var(--secondary-color)] transition ease-linear cursor-pointer'/>
+                  <Linkedin className='hover:text-[var(--secondary-color)] transition ease-linear cursor-pointer' />
+                  <Github className='hover:text-[var(--secondary-color)] transition ease-linear cursor-pointer'/>     
+            </div>
+            {/* <p className='flex gap-2 text-[var(--primary-color)] text-md font-light py-4'><UsersRound className='text-[var(--secondary-color)] w-6 h-6'/> 10+ Trusted clients!</p> */}
           </div>
         </div>
     </div>

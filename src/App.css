@@ -1,7 +1,7 @@
 @import "tailwindcss";
 @plugin "daisyui";
 
-@theme{
+:root{
 
     --font-game: "Press Start 2P", system-ui;
     --font-time: "Rajdhani", sans-serif;
@@ -30,6 +30,8 @@
 body{
   overflow: hidden;
   position: relative;
+  font-family: var(--font-body);
+  background-color: black;
 }
 
 /* Twinkling Stars */
@@ -103,7 +105,7 @@ body{
   }
 }
 
-.inner_cursor{
+/* .inner_cursor{
     position: fixed;
     width: 6px;
     height: 6px;
@@ -130,7 +132,7 @@ body{
     transition: .13s;
     z-index: 1000;
 
-}
+} */
 
 .main-button {
   position: relative;
@@ -218,4 +220,41 @@ body{
   width: 220px;
   height: 220px;
   opacity: 1;
+}
+
+.masked {
+  height: 400px;
+  width: auto;
+  -webkit-mask-image: url('../src/assets/Images/frame.png');
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  -webkit-mask-size: contain;
+  mask-image: url('../src/assets/Images/frame.png');
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: contain;
+  overflow: hidden;
+}
+
+.masked img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+}
+
+.is-tab-checked:checked{
+  border: 1px solid var(--fade-color);
+  background: transparent;
+  border-radius: 20px;
+}
+
+.swiper-slide {
+  transition: opacity 0.5s ease;
+  opacity: 0.4; /* dim side slides */
+  transform: scale(0.9);
+}
+
+.swiper-slide-active {
+  opacity: 1 !important; /* active slide full opacity */
+  transform: scale(1);
 }

@@ -36,7 +36,7 @@ const Testimonial = () => {
 
         <div className='py-22 px-20'>
 
-            <h1 className='text-4xl text-[var(--primary-color)] font-normal text-left'>
+            <h1 className='text-4xl text-[var(--primary-color)] font-normal text-center'>
                 Testimonal <span className='text-[var(--secondary-color)]'>what matters ?</span>
             </h1>
 
@@ -47,7 +47,7 @@ const Testimonial = () => {
                     key={index}
                     onMouseEnter={() => setHoveredIndex(index)}
                     onMouseLeave={() => setHoveredIndex(null)}
-                    className={`w-[320px] h-auto border border-gray-900 bg-black/30 rounded-xl p-5 transition duration-300 mx-3 opacity-60  ${
+                    className={`w-[320px] h-auto border border-gray-900 bg-black/30 rounded-xl p-5 transition duration-300 mx-3 opacity-80  ${
                         hoveredIndex !== null && hoveredIndex !== index ? 'blur-sm scale-[.97] opacity-30 ' : 'blur-0'
                     }`}
                     >

@@ -217,7 +217,7 @@ export const Game = () => {
 
     return (
         <div className='h-[100vh] w-full bg-gray-950 flex items-center justify-center flex-col gap-10'>
-            <h1 className='text-4xl text-white'>Enjoy Dino Game!</h1>
+            <h1 className='text-4xl text-white'>Let's Begin!</h1>
             {/* Game Canvas */}
             <div className='w-[700px] h-74 relative overflow-hidden'>
                 <div className='score-bar flex flex-row justify-end gap-5 text-white text-sm pb-10'>

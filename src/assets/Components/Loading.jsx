@@ -1,15 +1,66 @@
-import React from 'react'
-import { motion } from "framer-motion";
-import './Loading.css'
+import React, { useEffect, useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
+const Loading = ({ onFinish }) => {
 
-const Loading = () => {
+  const [show, setShow] = useState(true);
+  const [startExit, setStartExit] = useState(false);
+
+  const displayDuration = 3000; 
+  const exitAnimationDuration = 1000;
+  const totalDuration = displayDuration + exitAnimationDuration; 
+
+  useEffect(() => {
+    // Start the exit animation after displayDuration
+    const exitTimer = setTimeout(() => {
+      setStartExit(true);
+    }, displayDuration);
+
+    // Call onFinish after the exit animation completes
+    const finishTimer = setTimeout(() => {
+      setShow(false);
+      if (onFinish) onFinish();
+    }, totalDuration);
+
+    return () => {
+      clearTimeout(exitTimer);
+      clearTimeout(finishTimer);
+    };
+  }, [onFinish, displayDuration, totalDuration]);
+
   return (
-    <div className='w-[100%] h-[100vh] relative flex gap-4 items-center justify-center'>
-        <motion.svg initial={{ x: 0}} animate={{ x: -40}} transition={{duration: 0.5, delay: 3}} id='wheel' xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-ship-wheel-icon lucide-ship-wheel"><circle cx="12" cy="12" r="8"/><path d="M12 2v7.5"/><path d="m19 5-5.23 5.23"/><path d="M22 12h-7.5"/><path d="m19 19-5.23-5.23"/><path d="M12 14.5V22"/><path d="M10.23 13.77 5 19"/><path d="M9.5 12H2"/><path d="M10.23 10.23 5 5"/><circle cx="12" cy="12" r="2.5"/></motion.svg>
-        <motion.h2 initial={{ x: 30, opacity: 0}} animate={{ x: 55, opacity: 1}} transition={{duration: 0.5, delay: 3.5}} className='text-gray-200 absolute text-3xl' id='loader-text'>Hi there!</motion.h2>
-    </div>
-  )
-}
+    <AnimatePresence>
+      {show && (
+        <motion.div
+          initial={{ y: 0 }}
+          animate={
+            startExit
+              ? { 
+                  y: "-100%", 
+                  borderBottomLeftRadius: "50%", 
+                  borderBottomRightRadius: "50%" 
+                }
+              : { y: 0 }
+          }
+          exit={{ opacity: 0 }}
+          transition={{ 
+            duration: exitAnimationDuration / 1000, // Convert to seconds
+            ease: "easeInOut" 
+          }}
+          className="fixed bg-black inset-0 z-50 flex items-center justify-center"
+        >
+          {/* Your loading content */}
+          <div className="flex flex-col justify-center items-center">
+            <img
+              src="/fingerLoading.gif"
+              alt="Loading..."
+              className="w-auto invert-100 object-contain"
+            />
+          </div>
+        </motion.div>
+      )}
+    </AnimatePresence>
+  );
+};
 
-export default Loading
+export default Loading;
