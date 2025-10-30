@@ -97,40 +97,10 @@ const Header = () => {
         </div>
         <div className='text-gray-300 flex items-center gap-4 z-10'>    
           <div className="w-full text-gray-400 flex flex-col items-end justify-start">
-            <span className="font-light text-sm">{formattedTime}</span>
+            <span className="font-light text-lg" style={{fontFamily: "var(--font-time)"}}>{formattedTime}</span>
             <p className='font-light text-sm'><span className='text-(--primary-color)'>Last Visited:  </span>{lastLocation}</p>
           </div>
-          {/* <Grip  className='hover:text-[var(--secondary-color)] transition ease-linear cursor-pointer w-10 h-10' onClick={() => setShowNav(true)} /> */}
         </div>
-        {/* <div
-          className={`absolute top-0 ${showNav ? 'right-0' : '-right-100'} flex justify-between flex-col transition-all duration-500 w-90 text-gray-200 bg-white/5 backdrop-blur-sm h-screen z-10 px-6 py-14`}
-          style={{transitionProperty: 'right'}}
-        >
-            <TextTransition className='inline-block text-(--secondary-color)' style={{fontSize:"34px"}} springConfig={presets.wobbly}>{TEXTS[index % TEXTS.length]}</TextTransition>
-            <div>
-              <h2 className='text-3xl font-normal mb-4 text-gray-300'>Need a custom Quote? Let's Talk!</h2>
-              <button class="main-button">
-                <svg viewBox="0 0 24 24" class="arr-2" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path>
-                </svg>
-                <span class="text">Discuss Project</span>
-                <span class="circle"></span>
-                <svg viewBox="0 0 24 24" class="arr-1" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path>
-                </svg>
-              </button>
-            </div>
-            <div>
-              <p className='text-gray-300 text-lg mt-40 mb-4'>Follow me at: </p>
-              <div className='flex gap-6'>
-                  <Facebook className='hover:text-[var(--secondary-color)] transition ease-linear cursor-pointer' />
-                  <Instagram className='hover:text-[var(--secondary-color)] transition ease-linear cursor-pointer'/>
-                  <Linkedin className='hover:text-[var(--secondary-color)] transition ease-linear cursor-pointer' />
-                  <Github className='hover:text-[var(--secondary-color)] transition ease-linear cursor-pointer'/>     
-              </div>
-            </div>
-            <X  className= 'absolute top-2 right-2 hover:text-[var(--secondary-color)] transition ease-linear cursor-pointer w-8 h-8' onClick={() => setShowNav(false)} />
-        </div> */}
     </header>
   )
 }
