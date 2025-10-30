@@ -11,7 +11,7 @@ const InteractiveBackground = () => {
             const starsContainer = starsRef.current;
             if (!starsContainer) return;
 
-            for (let i = 0; i < 50; i++) {
+            for (let i = 0; i < 30; i++) {
                 const star = document.createElement('div');
                 star.className = 'star';
                 
@@ -67,8 +67,8 @@ const InteractiveBackground = () => {
 
     return (
         <>
-            <div ref={starsRef} className="stars relative -z-10" />
-            <div ref={blobContainerRef} className="blob-container relative -z-10" />
+            <div ref={starsRef} className="stars relative -z-50" />
+            {/* <div ref={blobContainerRef} className="blob-container relative -z-10" /> */}
         </>
     );
 };

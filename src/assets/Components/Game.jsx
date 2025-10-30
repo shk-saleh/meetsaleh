@@ -200,7 +200,7 @@ export const Game = () => {
                 setGameStart(true);
             }
 
-            if (e.code === "ArrowUp") {
+            if (e.code === "ArrowUp" || e.code === "Space") {
                 dinoJump();
             }
 
