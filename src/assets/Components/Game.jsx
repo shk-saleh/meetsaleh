@@ -228,7 +228,7 @@ export const Game = () => {
                     <h3 className='game-over-text text-gray-400 text-sm' style={{fontFamily: "var(--font-game)",  fontSize: "10px"}}>Game Over</h3>
                     <button onClick={playAgain} className='pointer'><img src={reload} alt="reload-btn" width="30px"/></button>
                 </div>
-                <div className='absolute bottom-42 ps-3 z-100' ref={dinoChar}>
+                <div className='absolute bottom-42 ps-3' ref={dinoChar}>
                     <img src={dinosrc} alt="dino" width={"55px"} />
                 </div>
                 {/* Clouds using map function */}

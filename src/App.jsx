@@ -46,9 +46,7 @@ const App = () => {
 
   return (
     <>
-      {/* {!loadingDone && <Loading onFinish={() => setLoadingDone(true)} />} */}
-      {!loadingDone && (
-      <div className="min-h-[100vh] h-auto w-full bg-[var(--body-color)] relative overflow-hidden">
+      <div className={`min-h-[100vh] h-auto w-full bg-[var(--body-color)] relative overflow-hidden ${!loadingDone ? 'opacity-0' : 'opacity-100'}`}>
         <Navbar /> 
           <Routes>
             <Route path="/" element={<Home />} />
@@ -59,7 +57,7 @@ const App = () => {
             <Route path="/contact" element={<Contact />} />
           </Routes>
       </div>
-      )}
+      {!loadingDone && <Loading onFinish={() => setLoadingDone(true)} />}
     </>
   );
 }

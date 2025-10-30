@@ -6,8 +6,8 @@ const Loading = ({ onFinish }) => {
   const [show, setShow] = useState(true);
   const [startExit, setStartExit] = useState(false);
 
-  const displayDuration = 3000; 
-  const exitAnimationDuration = 1000;
+  const displayDuration = 2500; 
+  const exitAnimationDuration = 600;
   const totalDuration = displayDuration + exitAnimationDuration; 
 
   useEffect(() => {
@@ -32,24 +32,19 @@ const Loading = ({ onFinish }) => {
     <AnimatePresence>
       {show && (
         <motion.div
-          initial={{ y: 0 }}
+          initial={{ opacity: 1 }}
           animate={
             startExit
-              ? { 
-                  y: "-100%", 
-                  borderBottomLeftRadius: "50%", 
-                  borderBottomRightRadius: "50%" 
-                }
-              : { y: 0 }
+              ? { opacity: 0 }
+              : { opacity: 1 }
           }
           exit={{ opacity: 0 }}
           transition={{ 
-            duration: exitAnimationDuration / 1000, // Convert to seconds
+            duration: exitAnimationDuration / 1000, 
             ease: "easeInOut" 
           }}
           className="fixed bg-black inset-0 z-50 flex items-center justify-center"
         >
-          {/* Your loading content */}
           <div className="flex flex-col justify-center items-center">
             <img
               src="/fingerLoading.gif"
