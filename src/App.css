@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 @import "tailwindcss";
 @plugin "daisyui";
 
@@ -12,18 +15,6 @@
     --primary-color: #ffff;
     --secondary-color: oklch(70.5% 0.213 47.604);
     --subtext-color: oklch(0.869 0.022 252.894);
-
-    --animate-wave: wave 1s ease-in-out infinite;
-
-    @keyframes wave {
-      0%,
-      100% {
-        transform: rotate(-8deg);
-      }
-      50% {
-        transform: rotate(8deg);
-      }
-    }
   
 }
 
