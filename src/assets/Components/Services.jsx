@@ -87,8 +87,8 @@ export default function Services() {
 function Card({ idx, title, desc }) {
   return (
     <motion.div
-      className="w-full h-full flex flex-col gap-4 text-white border border-orange-200 rounded-2xl 
-      bg-gradient-to-bl from-[var(--secondary-color)] to-[var(--body-color)] 
+      className="w-full h-full flex flex-col gap-4 text-white border border-gray-800 rounded-2xl 
+      bg-gradient-to-bl from-(--fade-color) via-(--secondary-color)/30 to-(--body-color)
       py-8 px-6 shadow-2xl"
     >
       <span className="text-5xl p-2 w-16 h-16 flex justify-center items-center rounded-full font-bold bg-(--primary-color) text-(--body-color)">{idx}</span>

@@ -68,7 +68,7 @@ const InteractiveBackground = () => {
     return (
         <>
             <div ref={starsRef} className="stars relative -z-10" />
-            {/* <div ref={blobContainerRef} className="blob-container relative -z-10" /> */}
+            <div ref={blobContainerRef} className="blob-container relative -z-10" />
         </>
     );
 };

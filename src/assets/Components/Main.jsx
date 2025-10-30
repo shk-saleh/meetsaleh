@@ -8,17 +8,27 @@ const Main = () => {
   return (
     <div className='relative flex justify-center gap-10 items-center z-1 min-h-[75vh] px-28'>
         <div>
-            <img src={headshot} className='border border-gray-500 bg-white/5 backdrop-blur-sm rounded-[10%] rotate-5 transition-all ease-linear hover:border-orange-500 hover:rotate-0' alt="personal-img" width="300px"/>
+            <img src={headshot} className='border border-gray-500 bg-white/5 backdrop-blur-sm rounded-[10%] rotate-5 transition-all ease-linear hover:border-white hover:rotate-0 cursor-pointer' alt="personal-img" width="300px"/>
         </div>
         <div className='relative'>
           <div className='flex gap-2 pb-4'>
-              <button className='bg-white/8 border border-gray-700 rounded-2xl text-sm text-[var(--primary-color)] px-3 py-1'>Full Stack Engineer</button>
-              <button className='bg-white/8 border border-gray-700 rounded-2xl text-sm text-[var(--primary-color)] px-3 py-1'>UI Designer</button>
+              <button className='flex items-center gap-2 bg-white/8 border border-gray-700 rounded-2xl text-sm text-[var(--primary-color)] px-3 py-1'>
+                <span class="relative flex size-3">
+                  <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-orange-400 opacity-75"></span>
+                  <span class="relative inline-flex size-3 rounded-full bg-orange-500"></span>
+                </span>
+                Full Stack Engineer
+              </button>
+              <button className='flex items-center gap-2 bg-white/8 border border-gray-700 rounded-2xl text-sm text-[var(--primary-color)] px-3 py-1'>
+                <span class="relative flex size-3">
+                  <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-yellow-400 opacity-75"></span>
+                  <span class="relative inline-flex size-3 rounded-full bg-yellow-500"></span>
+                </span>
+                UI Designer
+              </button>
           </div>
-          {/* <span className='flex items-center gap-2 text-3xl text-[var(--primary-color)] pb-2'><Hand className='text-[var(--secondary-color)] animate-wave'/> I'm Muhammad Saleh.</span> */}
-          {/* <h1 className='text-[70px] z-[-1] text-[var(--primary-color)] leading-none font-normal pb-2'>Build <span className='text-[var(--secondary-color)] '>Business Solutions </span><br /> that stand out!</h1> */}
-          <h1 className='text-[70px] z-[-1] text-[var(--primary-color)] leading-none font-normal pb-2'>Hi! I'm Muhammad Saleh <br/> Creative Designer or <span className='text-(--secondary-color)'>{"{Developer}"}</span></h1>
-          <MousePointer2 className='absolute top-42 right-82 w-10 h-10 text-yellow-400' />
+          <h1 className='text-[70px] z-[-1] text-[var(--primary-color)] leading-none font-normal pb-2'>Hi! I'm Muhammad Saleh <br/> Creative <span className='text-orange-400'>Designer</span> or  <br/> <span className=''>Developer</span>.</h1>
+          <MousePointer2 className='absolute top-43 right-50 w-8 h-8 text-orange-400' />
           <span className='text-lg text-(--subtext-color) font-light'>Building aesthetic and performance-driven SaaS interfaces that users love.</span>
           <div className='flex gap-5 items-center h-10 pt-8'>
             <button class="main-button">
@@ -36,7 +46,6 @@ const Main = () => {
                   <Linkedin className='hover:text-[var(--secondary-color)] transition ease-linear cursor-pointer' />
                   <Github className='hover:text-[var(--secondary-color)] transition ease-linear cursor-pointer'/>     
             </div>
-            {/* <p className='flex gap-2 text-[var(--primary-color)] text-md font-light py-4'><UsersRound className='text-[var(--secondary-color)] w-6 h-6'/> 10+ Trusted clients!</p> */}
           </div>
         </div>
     </div>

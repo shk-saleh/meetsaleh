@@ -216,16 +216,16 @@ export const Game = () => {
 
 
     return (
-        <div className='h-[100vh] w-full bg-gray-950 flex items-center justify-center flex-col gap-10'>
-            <h1 className='text-4xl text-white'>Let's Begin!</h1>
+        <div className='h-[100vh] w-full bg-(--body-color) flex items-center justify-center flex-col gap-10'>
+            {/* <h1 className='text-4xl text-white'>Let's Begin!</h1> */}
             {/* Game Canvas */}
             <div className='w-[700px] h-74 relative overflow-hidden'>
                 <div className='score-bar flex flex-row justify-end gap-5 text-white text-sm pb-10'>
-                    <span>HI {highscore}</span>
-                    <span>{formatScore(score)}</span>
+                    <span style={{fontFamily: "var(--font-game)", fontSize: "10px"}}>HI {highscore}</span>
+                    <span style={{fontFamily: "var(--font-game)",  fontSize: "10px"}}>{formatScore(score)}</span>
                 </div>
                 <div className="flex items-center justify-center flex-col gap-2" style={{ display: gameOver ? "flex" : "none" }}>
-                    <h3 className='game-over-text text-gray-400 text-sm'>Game Over</h3>
+                    <h3 className='game-over-text text-gray-400 text-sm' style={{fontFamily: "var(--font-game)",  fontSize: "10px"}}>Game Over</h3>
                     <button onClick={playAgain} className='pointer'><img src={reload} alt="reload-btn" width="30px"/></button>
                 </div>
                 <div className='absolute bottom-42 ps-3 z-100' ref={dinoChar}>

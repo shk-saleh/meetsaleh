@@ -74,7 +74,8 @@ body{
 
 .blob {
   position: absolute;
-  background: oklch(70.5% 0.213 47.604 / 0.2);
+  /* background: oklch(70.5% 0.213 47.604 / 0.2); */
+  background: oklch(38.4% 0.02758 58.011 / 0.2);
   border-radius: 50%;
   mix-blend-mode: screen;
   animation: float var(--duration) ease-in-out infinite;
@@ -258,3 +259,4 @@ body{
   opacity: 1 !important; /* active slide full opacity */
   transform: scale(1);
 }
+
