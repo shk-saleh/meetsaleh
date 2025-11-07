@@ -6,7 +6,7 @@ import {Link} from 'react-router-dom';
 const Main = () => {
   
   return (
-    <div className='relative flex flex-col-reverse md:flex-row  justify-center gap-10 items-center z-1 min-h-[75vh] md:px-28 px-6 pt-20 pb-0 md:py-0'>
+    <div className='relative flex flex-col-reverse md:flex-row  justify-center gap-10 items-center z-1 min-h-[75vh] md:px-28 px-6 pt-18 pb-0 md:py-0'>
         <div>
             <img src={headshot} className='border border-gray-500 bg-white/5 backdrop-blur-sm rounded-[10%] rotate-5 transition-all ease-linear hover:border-white hover:rotate-0 cursor-pointer my-10' alt="personal-img" width="300px"/>
         </div>

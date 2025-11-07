@@ -74,7 +74,7 @@ export default function Services() {
         {SERVICES.map((service) => (
           <SwiperSlide
             key={service.idx}
-            className="flex justify-center items-center !w-[350px]"
+            className="flex justify-center items-center w-[330px] md:w-[350px]"
           >
             <Card {...service} />
           </SwiperSlide>
@@ -87,8 +87,7 @@ export default function Services() {
 function Card({ idx, title, desc }) {
   return (
     <motion.div
-      className="w-full h-full flex flex-col gap-4 text-white border border-gray-800 rounded-2xl 
-      bg-gradient-to-bl from-(--fade-color) via-(--secondary-color)/30 to-(--body-color)
+      className="w-full h-full flex flex-col gap-4 text-white border border-gray-800 rounded-2xl bg-gradient-to-bl from-(--fade-color) via-(--secondary-color)/30 to-(--body-color)
       py-8 px-6 shadow-2xl"
     >
       <span className="text-4xl md:text-5xl h-10 w-10 md:w-16 md:h-16 flex justify-center items-center rounded-full font-bold bg-(--primary-color) text-(--body-color)">{idx}</span>

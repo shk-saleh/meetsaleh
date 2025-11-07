@@ -37,7 +37,7 @@ const Testimonial = () => {
         <div className='max-w-7xl place-self-center py-8 md:py-22 px-6 md:px-20'>
 
             <h1 className='text-3xl md:text-4xl py-10 text-[var(--primary-color)] font-normal text-center'>
-                Testimonal <span className='text-[var(--secondary-color)]'>what matters ?</span>
+                Words <span className='text-[var(--secondary-color)]'>that matter?</span>
             </h1>
 
             <Marquee speed={60} direction={top} pauseOnHover={true} className='pt-10 px-28'>
