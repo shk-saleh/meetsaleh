@@ -13,6 +13,7 @@ const Navbar = () => {
     const clickSound = new Audio("/sounds/mouse-click.mp3");
     clickSound.volume = 0.2;
     clickSound.play();
+    window.scrollTo(0, 0);
   };
 
 

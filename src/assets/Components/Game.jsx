@@ -136,7 +136,7 @@ export const Game = () => {
             let dinoBottom = parseInt(window.getComputedStyle(dinoChar.current).getPropertyValue("bottom"));
             let cactusLeft = parseInt(window.getComputedStyle(cactus.current).getPropertyValue("left"));
 
-            console.log(dinoBottom, cactusLeft);
+            // console.log(dinoBottom, cactusLeft);
 
             if (dinoBottom < 200 && cactusLeft > 0 && cactusLeft <= 40) {
                 restart();
@@ -216,10 +216,9 @@ export const Game = () => {
 
 
     return (
-        <div className='h-[100vh] w-full bg-(--body-color) flex items-center justify-center flex-col gap-10'>
-            {/* <h1 className='text-4xl text-white'>Let's Begin!</h1> */}
+        <div className='h-[100vh] w-full bg-(--body-color) flex items-center pt-30 max-w-6xl flex-col'>
             {/* Game Canvas */}
-            <div className='w-[700px] h-74 relative overflow-hidden'>
+            <div className='w-[500px] h-40 relative overflow-hidden'>
                 <div className='score-bar flex flex-row justify-end gap-5 text-white text-sm pb-10'>
                     <span style={{fontFamily: "var(--font-game)", fontSize: "10px"}}>HI {highscore}</span>
                     <span style={{fontFamily: "var(--font-game)",  fontSize: "10px"}}>{formatScore(score)}</span>
@@ -228,7 +227,7 @@ export const Game = () => {
                     <h3 className='game-over-text text-gray-400 text-sm' style={{fontFamily: "var(--font-game)",  fontSize: "10px"}}>Game Over</h3>
                     <button onClick={playAgain} className='pointer'><img src={reload} alt="reload-btn" width="30px"/></button>
                 </div>
-                <div className='absolute bottom-42 ps-3' ref={dinoChar}>
+                <div className='absolute bottom-9 ps-3' ref={dinoChar}>
                     <img src={dinosrc} alt="dino" width={"55px"} />
                 </div>
                 {/* Clouds using map function */}
@@ -252,6 +251,15 @@ export const Game = () => {
                     <img src={road} className='road' alt="" />
                     <img src={road} className='road' alt="" />
                 </div>
+            </div>
+            <div className='w-[500px] flex flex-col justify-start gap-2 text-zinc-500'>
+                <h2 className='mb-2 text-2xl font-bold text-zinc-300'>No internet</h2>
+                <span>Try</span>
+                <ul className='list-disc ps-6'>
+                    <li>Checking the network cables, modem, and router</li>
+                    <li>Reconnecting to Wi-Fi</li>
+                </ul>
+                <span className='text-sm'>ERR_INTERNET_DISCONNECTED</span>
             </div>
         </div>
     )

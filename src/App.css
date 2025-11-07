@@ -23,6 +23,7 @@ body{
   position: relative;
   font-family: var(--font-body);
   background-color: black;
+  scroll-behavior: smooth;
 }
 
 /* Twinkling Stars */
