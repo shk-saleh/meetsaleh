@@ -37,10 +37,10 @@ const SERVICES = [
 
 export default function Services() {
   return (
-    <div className="flex flex-col items-center justify-center w-full my-12 h-auto">
+    <div className="flex flex-col items-center justify-center w-full my-12 h-auto px-6">
       {/* Header */}
-      <div className='flex flex-col items-center gap-4 mb-24 text-center'>
-        <h1 className='text-4xl text-[var(--primary-color)] font-normal'>
+      <div className='flex flex-col items-center gap-4 mb-16 md:mb-24 text-center'>
+        <h1 className='text-3xl text-[var(--primary-color)] font-normal'>
           Solutions I <span className='text-[var(--secondary-color)] font-medium'>Provide?</span>
         </h1>
         <p className='text-[var(--primary-color)]/80 font-light'>
@@ -91,7 +91,7 @@ function Card({ idx, title, desc }) {
       bg-gradient-to-bl from-(--fade-color) via-(--secondary-color)/30 to-(--body-color)
       py-8 px-6 shadow-2xl"
     >
-      <span className="text-5xl p-2 w-16 h-16 flex justify-center items-center rounded-full font-bold bg-(--primary-color) text-(--body-color)">{idx}</span>
+      <span className="text-4xl md:text-5xl h-10 w-10 md:w-16 md:h-16 flex justify-center items-center rounded-full font-bold bg-(--primary-color) text-(--body-color)">{idx}</span>
       <div className="text-2xl font-semibold">{title}</div>
       <div className="text-(--subtext-color) text-sm font-light leading-relaxed">{desc}</div>
       <button className='flex justify-center items-center border border-(--fade-color) bg-(--primary-color) text-(--body-color) rounded-lg py-2 w-auto shadow-lg'>Request Service <Send className='ms-5 w-5 h-5' /></button>

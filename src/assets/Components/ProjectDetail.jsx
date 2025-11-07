@@ -19,7 +19,7 @@ const ProjectDetail = () => {
       setproject(foundProject);
     }
 
-    console.log(foundProject);
+    window.scrollTo(0, 0);
 
     // Fetch project data based on slug
   }, [slug])

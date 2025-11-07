@@ -1,7 +1,7 @@
 import {React , useState , useEffect} from 'react';
 import Marquee from "react-fast-marquee";
-import reviewAvatar from '../Images/review-avatar.png';
-import { Linkedin } from "lucide-react";
+// import reviewAvatar from '../Images/review-avatar.png';
+import { Linkedin, UserCircle } from "lucide-react";
 
     
 
@@ -25,7 +25,7 @@ const Testimonial = () => {
         },
         {
             name: "Muhammad Ahmed",
-            username: "@madnan",
+            username: "@ahmedali",
             review: "I hired him for a custom MERN stack application and was blown away by the result. The UI is smooth, and the backend works flawlessly. Communication was top-notch throughout.",
         },
     ];
@@ -34,9 +34,9 @@ const Testimonial = () => {
 
     return (
 
-        <div className='max-w-7xl place-self-center py-22 px-20'>
+        <div className='max-w-7xl place-self-center py-8 md:py-22 px-6 md:px-20'>
 
-            <h1 className='text-4xl text-[var(--primary-color)] font-normal text-center'>
+            <h1 className='text-3xl md:text-4xl py-10 text-[var(--primary-color)] font-normal text-center'>
                 Testimonal <span className='text-[var(--secondary-color)]'>what matters ?</span>
             </h1>
 
@@ -53,7 +53,8 @@ const Testimonial = () => {
                     >
                     <div className='flex justify-between'>
                         <div className='flex gap-4 items-center'>
-                        <img className='rounded-full w-12 h-12' src={reviewAvatar} alt="review-avatar" />
+                        {/* <img className='rounded-full w-12 h-12' src={reviewAvatar} alt="review-avatar" /> */}
+                        <UserCircle className='w-6 h-6'/>
                         <p className='text-md text-white leading-5'>
                             {item.name} <br />
                             <span className='text-white text-sm font-light'>{item.username}</span>
@@ -66,7 +67,7 @@ const Testimonial = () => {
                 ))}
                 </div>
             </Marquee>
-            
+
         </div>
     );
 };

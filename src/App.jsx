@@ -50,11 +50,12 @@ const App = () => {
         <Navbar /> 
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/fun" element={<Game />} />
+            <Route path="/game" element={<Game />} />
             <Route path="/about" element={<About />} />
             <Route path="/projects" element={<Project />} />
             <Route path="/projects/:slug" element={<ProjectDetail />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/*" element={<Game />} />
           </Routes>
       </div>
       {!loadingDone && <Loading onFinish={() => setLoadingDone(true)} />}

@@ -37,15 +37,15 @@ const Navbar = () => {
   
 
   return (
-        <div className={`fixed top-80 -right-30 p-1 rotate-90 z-4 backdrop-blur-3xl flex justify-center items-center rounded-[50px] gap-8 border text-gray-700 bg-black transition-all duration-500 ${show? '-right-30' : '-right-70' } `}>
+        <div className={`fixed right-6 md:top-80 md:-right-30 p-1 rotate-0 md:rotate-90 z-4 backdrop-blur-3xl flex justify-center items-center rounded-[50px] gap-6 md:gap-8 border text-gray-700 bg-black transition-all duration-500 ${show? 'bottom-5 md:-right-30' : '-bottom-20 md:-right-70' } `}>
           {[
             { icon: House, label: "Home", path: "/" },
             { icon: UserRound, label: "About", path: "/about" },
             { icon: Hammer , label: "Projects", path: "/projects" },
             { icon: Send, label: "Contact", path: "/contact" },
-            { icon: Gamepad2, label: "Game", path: "/fun" },
+            { icon: Gamepad2, label: "Game", path: "/game" },
           ].map((item, index) => (
-            <NavLink key={index} className={({isActive}) => isActive? "bg-(--fade-color)/50 border border-gray-700 tooltip tooltip-left p-2.5 rounded-4xl text-gray-50 -rotate-90" : "relative tooltip tooltip-left -rotate-90 flex flex-col p-2.5 items-center gap-1 text-gray-400" } to={item.path} data-tip={item.label} onClick={playClickSound}>
+            <NavLink key={index} className={({isActive}) => isActive? "bg-(--fade-color)/50 border border-gray-700 tooltip tooltip-left p-3 md:p-2.5 rounded-4xl text-gray-50 rotate-0 md:-rotate-90" : "relative tooltip tooltip-left rotate-0 md:-rotate-90 flex flex-col p-2.5 items-center gap-1 text-gray-400" } to={item.path} data-tip={item.label} onClick={playClickSound}>
               <item.icon className="w-6 h-6" />
             </NavLink>
           ))}

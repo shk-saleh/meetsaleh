@@ -130,19 +130,23 @@ export const Game = () => {
 
         // Set up new collision detection interval
         collisionIntervalRef.current = setInterval(() => {
-
             if (!dinoChar.current || !cactus.current) return;
 
-            let dinoBottom = parseInt(window.getComputedStyle(dinoChar.current).getPropertyValue("bottom"));
-            let cactusLeft = parseInt(window.getComputedStyle(cactus.current).getPropertyValue("left"));
+            const dinoRect = dinoChar.current.getBoundingClientRect();
+            const cactusRect = cactus.current.getBoundingClientRect();
 
-            // console.log(dinoBottom, cactusLeft);
+            const isCollision =
+                dinoRect.left < cactusRect.right &&
+                dinoRect.right > cactusRect.left &&
+                dinoRect.top < cactusRect.bottom &&
+                dinoRect.bottom > cactusRect.top;
 
-            if (dinoBottom < 200 && cactusLeft > 0 && cactusLeft <= 40) {
+            if (isCollision) {
                 restart();
             }
 
         }, 10);
+
     }
 
 
@@ -225,7 +229,7 @@ export const Game = () => {
                 </div>
                 <div className="flex items-center justify-center flex-col gap-2" style={{ display: gameOver ? "flex" : "none" }}>
                     <h3 className='game-over-text text-gray-400 text-sm' style={{fontFamily: "var(--font-game)",  fontSize: "10px"}}>Game Over</h3>
-                    <button onClick={playAgain} className='pointer'><img src={reload} alt="reload-btn" width="30px"/></button>
+                    <button onClick={playAgain} className='cursor-pointer'><img src={reload} alt="reload-btn" width="30px"/></button>
                 </div>
                 <div className='absolute bottom-9 ps-3' ref={dinoChar}>
                     <img src={dinosrc} alt="dino" width={"55px"} />
@@ -244,7 +248,7 @@ export const Game = () => {
                         />
                     ))}
                 </div>
-                <div className='absolute top-20 right-[-50px]' ref={cactus}>
+                <div className='absolute top-20 right-50' ref={cactus}>
                     <img src={cactusSrc} alt="" className='h-12 w-12' />
                 </div>
                 <div className='absolute w-[800px] h-[100px] overflow-hidden road-container' ref={gameRoad}>

@@ -46,9 +46,9 @@
 }
   
 @keyframes jump {
-    0% { bottom: 168px; }
-    50% { bottom: 250px; }
-    100% { bottom: 168px; }
+    0% { bottom: 36px; }
+    50% { bottom: 160px; }
+    100% { bottom: 36; }
 }
 
 .clouds{

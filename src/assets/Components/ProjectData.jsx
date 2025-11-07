@@ -14,18 +14,18 @@ const ProjectData = () => {
                 Projects 
             </h2>
             <div className="tabs tabs-box justify-end bg-transparent mt-6 shadow-none">
-                <input type="radio" name="my_tabs_1" className="tab is-tab-checked" aria-label="Designing" defaultChecked />
+                <input type="radio" name="my_tabs_1" className="tab is-tab-checked" aria-label="Development" defaultChecked />
                 <div className="tab-content bg-transparent border-none p-4 shadow-none">  
                   <div className='grid grid-cols-2 gap-6 mt-6 '>
-                    { designProjects.map((project) => (
+                    { devProjects.map((project) => (
                       <ProjectCard key={project.id} {...project} />
                     ))}
                   </div>
                 </div>
-                <input type="radio" name="my_tabs_1" className="tab is-tab-checked" aria-label="Development" />
+                <input type="radio" name="my_tabs_1" className="tab is-tab-checked" aria-label="Designing" />
                 <div className="tab-content bg-transparent border-none p-4 shadow-none">
                   <div className='grid grid-cols-2 gap-6 mt-6 '>
-                    { devProjects.map((project) => (
+                    { designProjects.map((project) => (
                       <ProjectCard key={project.id} {...project} />
                     ))}
                   </div>

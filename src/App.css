@@ -24,6 +24,7 @@ body{
   font-family: var(--font-body);
   background-color: black;
   scroll-behavior: smooth;
+  --webkit-scroll-behavior: smooth;
 }
 
 /* Twinkling Stars */
@@ -250,5 +251,17 @@ body{
 .swiper-slide-active {
   opacity: 1 !important; /* active slide full opacity */
   transform: scale(1);
+}
+
+.text-grad-orange{
+  background: linear-gradient(180deg, #ff8a00, #b0630a, #522e04);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-grad-gray{
+  background: linear-gradient(180deg, #ffffff, #616160, #393939);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
