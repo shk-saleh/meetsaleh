@@ -40,10 +40,10 @@ export default function Services() {
     <div className="flex flex-col items-center justify-center w-full my-12 h-auto px-6">
       {/* Header */}
       <div className='flex flex-col items-center gap-4 mb-16 md:mb-24 text-center'>
-        <h1 className='text-3xl text-[var(--primary-color)] font-normal'>
+        <h1 className='text-3xl md:text-4xl text-[var(--primary-color)] font-normal'>
           Solutions I <span className='text-[var(--secondary-color)] font-medium'>Provide?</span>
         </h1>
-        <p className='text-[var(--primary-color)]/80 font-light'>
+        <p className='text-sm text-[var(--primary-color)]/80 font-light'>
           Offering services in custom website development, design conversions, and performance optimization.
         </p>
       </div>
@@ -74,7 +74,7 @@ export default function Services() {
         {SERVICES.map((service) => (
           <SwiperSlide
             key={service.idx}
-            className="flex justify-center items-center w-[330px] md:w-[350px]"
+            className="flex justify-center !w-[310px]"
           >
             <Card {...service} />
           </SwiperSlide>
@@ -90,7 +90,7 @@ function Card({ idx, title, desc }) {
       className="w-full h-full flex flex-col gap-4 text-white border border-gray-800 rounded-2xl bg-gradient-to-bl from-(--fade-color) via-(--secondary-color)/30 to-(--body-color)
       py-8 px-6 shadow-2xl"
     >
-      <span className="text-4xl md:text-5xl h-10 w-10 md:w-16 md:h-16 flex justify-center items-center rounded-full font-bold bg-(--primary-color) text-(--body-color)">{idx}</span>
+      <span className="text-4xl h-10 w-10 md:w-14 md:h-14 flex justify-center items-center rounded-full font-bold bg-(--primary-color) text-(--body-color)">{idx}</span>
       <div className="text-2xl font-semibold">{title}</div>
       <div className="text-(--subtext-color) text-sm font-light leading-relaxed">{desc}</div>
       <button className='flex justify-center items-center border border-(--fade-color) bg-(--primary-color) text-(--body-color) rounded-lg py-2 w-auto shadow-lg'>Request Service <Send className='ms-5 w-5 h-5' /></button>

@@ -121,9 +121,9 @@
     const AboutData = () => {
 
     return (
-        <section className="max-w-6xl mx-auto text-gray-200 py-18">
+        <section className="md:max-w-6xl px-6 mx-0 md:mx-auto text-gray-200 py-12 md:py-18">
             <div className="border-b border-[var(--fade-color)]">
-                <h2 className="text-4xl font-medium mb-10">
+                <h2 className="text-3xl md:text-4xl font-medium mb-10">
                 <span className="text-[var(--secondary-color)]">— </span>
                 About Me
                 </h2>
@@ -152,13 +152,12 @@
                 </button>
             </div>
             <div className='flex flex-col gap-10 py-10 border-b border-[var(--fade-color)]'>
-                {/* <h3 className="text-2xl text-[var(--primary-color)]">My Tools</h3> */}
                     <div className='flex flex-col gap-4'>
                         <div className='flex items-center gap-1'>
                             <Frame className='w-4 h-4 text-[var(--secondary-color)]' />
                             <span class="text-[var(--white-color)] font-normal">Designing Toolkit</span>
                         </div>
-                        <div className='flex flex-row gap-4'>   
+                        <div className='flex flex-wrap gap-4'>   
                             {designingTools.map((tool) => (
                                 <div className='flex flex-col gap-2 items-center font-normal px-4 py-2 border border-[var(--subtext-color)]/10 rounded-lg'>      
                                     <img src={tool.icon} className='w-12 h-12 hover:scale-105 transition duration-300 cursor-pointer opacity-70 hover:opacity-100' alt="" />
@@ -172,7 +171,7 @@
                             <Braces className='w-4 h-4 text-[var(--secondary-color)]' />
                             <span class="text-[var(--white-color)] font-normal">Developement Toolkit</span>
                         </div>
-                        <div className='flex flex-row gap-4'> 
+                        <div className='flex flex-wrap gap-4'> 
                             {devTools.map((tool) => (
                                 <div className='flex flex-col gap-2 items-center font-normal px-4 py-2 border border-[var(--subtext-color)]/10 rounded-lg'>      
                                     <img src={tool.icon} className='w-12 h-12 hover:scale-105 transition duration-300 cursor-pointer opacity-70 hover:opacity-100' alt="" />
@@ -186,7 +185,7 @@
                             <Wrench className='w-4 h-4 text-[var(--secondary-color)]' />
                             <span class="text-[var(--white-color)] font-normal">Platform / Service</span>
                         </div>
-                        <div className='flex flex-row gap-4'> 
+                        <div className='flex flex-wrap gap-4'> 
                             {plateforms.map((tool) => (
                                 <div className='flex flex-col gap-2 items-center font-normal px-4 py-2 border border-[var(--subtext-color)]/10 rounded-lg'>      
                                     <img src={tool.icon} className='w-12 h-12 hover:scale-105 transition duration-300 cursor-pointer opacity-70 hover:opacity-100' alt="" />
@@ -200,7 +199,7 @@
                             <GitBranch className='w-4 h-4 text-[var(--secondary-color)]' />
                             <span class="text-[var(--white-color)] font-normal">Deployment toolkit</span>
                         </div>
-                        <div className='flex flex-row gap-4'> 
+                        <div className='flex flex-wrap gap-4'> 
                             {deployment.map((tool) => (
                                 <div className='flex flex-col gap-2 items-center font-normal px-4 py-2 border border-[var(--subtext-color)]/10 rounded-lg'>      
                                     <img src={tool.icon} className='w-12 h-12 hover:scale-105 transition duration-300 cursor-pointer opacity-70 hover:opacity-100' alt="" />
@@ -211,8 +210,8 @@
                     </div>
             </div>
             {/* Education or Experience */}
-            <div className='flex flex-row gap-10 py-10 relative'>
-                <div className='w-1/2'>
+            <div className='flex md:flex-row flex-col gap-10 py-10 relative'>
+                <div className='md:w-1/2 w-full'>
                     <span class="text-xl text-(--primary-color) font-normal">Experience</span>
                     {experienceData.map((exp) => (
                         <div className='flex flex-row items-start justify-start p-8 gap-6 mt-6 font-normal border border-[var(--subtext-color)]/20 bg-gradient-to-tr from-(--primary-white)/5 to-(--secondary-color)/20 rounded-lg transform-all duration-300 hover:border-(--primary-color)/50 cursor-pointer'>      
@@ -225,7 +224,7 @@
                         </div>
                     ))}
                 </div>
-                <div className='w-1/2'>
+                <div className='md:w-1/2 w-full'>
                     <span class="text-xl text-(--primary-color) font-normal">Education</span>
                     {educationData.map((edu) => (
                         <div className='relative flex flex-row items-start justify-start group p-8 gap-6 mt-6 font-normal border border-[var(--subtext-color)]/20 bg-black transition-all duration-300 rounded-lg hover:border-(--primary-color)/50 cursor-pointer'>      

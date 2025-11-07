@@ -220,9 +220,9 @@ export const Game = () => {
 
 
     return (
-        <div className='h-[100vh] w-full bg-(--body-color) flex items-center pt-30 max-w-6xl flex-col'>
+        <div className='h-[100vh] overflow-y-hidden w-full bg-(--body-color) flex items-center pt-20 max-w-6xl flex-col'>
             {/* Game Canvas */}
-            <div className='w-[500px] h-40 relative overflow-hidden'>
+            <div className='w-[300px] md:w-[500px] h-40 relative overflow-hidden'>
                 <div className='score-bar flex flex-row justify-end gap-5 text-white text-sm pb-10'>
                     <span style={{fontFamily: "var(--font-game)", fontSize: "10px"}}>HI {highscore}</span>
                     <span style={{fontFamily: "var(--font-game)",  fontSize: "10px"}}>{formatScore(score)}</span>
@@ -256,7 +256,7 @@ export const Game = () => {
                     <img src={road} className='road' alt="" />
                 </div>
             </div>
-            <div className='w-[500px] flex flex-col justify-start gap-2 text-zinc-500'>
+            <div className='w-[300px] md:w-[500px] flex flex-col justify-start gap-2 text-zinc-500'>
                 <h2 className='mb-2 text-2xl font-bold text-zinc-300'>No internet</h2>
                 <span>Try</span>
                 <ul className='list-disc ps-6'>

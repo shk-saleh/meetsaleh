@@ -9,7 +9,7 @@ import CTA from '../Components/CTA'
 
 const About = () => {
   return (
-    <div className='font-body flex flex-col w-[100%] min-h-[100vh] pt-4'>
+    <div className='font-body flex flex-col min-h-[100vh] pt-4'>
         <AboutData/>
         <CTA/>
         <Footer/>

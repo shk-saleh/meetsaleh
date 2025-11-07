@@ -37,7 +37,7 @@ const Navbar = () => {
   
 
   return (
-        <div className={`fixed right-6 md:top-80 md:-right-30 p-1 rotate-0 md:rotate-90 z-4 backdrop-blur-3xl flex justify-center items-center rounded-[50px] gap-3 md:gap-8 border text-gray-700 bg-black transition-all duration-500 ${show? 'bottom-5 md:-right-30' : '-bottom-20 md:-right-70' } `}>
+        <div className={`fixed h-16 right-2 md:top-80 md:-right-30 p-2 rotate-0 md:rotate-90 z-4 backdrop-blur-xl flex justify-center items-center rounded-[50px] gap-3 md:gap-6 border text-gray-700 bg-black/60 transition-all duration-500 ${show? 'bottom-5 md:-right-30' : '-bottom-20 md:-right-70' } `}>
           {[
             { icon: House, label: "Home", path: "/" },
             { icon: UserRound, label: "About", path: "/about" },

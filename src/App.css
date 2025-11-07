@@ -22,10 +22,11 @@ body{
   overflow-x: hidden;
   position: relative;
   font-family: var(--font-body);
-  background-color: black;
+  background-color: var(--body-color) !important;
   scroll-behavior: smooth;
   --webkit-scroll-behavior: smooth;
 }
+
 
 /* Twinkling Stars */
 .stars {
@@ -217,7 +218,7 @@ body{
 }
 
 .masked {
-  height: 400px;
+  height: 350px;
   width: auto;
   -webkit-mask-image: url('../src/assets/Images/frame.png');
   -webkit-mask-repeat: no-repeat;
@@ -265,3 +266,9 @@ body{
   -webkit-text-fill-color: transparent;
 }
 
+
+@media (max-width: 420px) {
+  .masked {
+    height: 240px;
+  }
+}
