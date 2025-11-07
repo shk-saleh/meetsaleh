@@ -91,7 +91,7 @@ const Header = () => {
 
 
   return (
-    <header className='w-full flex items-center justify-between px-8 md-px-18 py-6'>
+    <header className='w-full flex items-center justify-between px-6 md-px-18 py-6'>
         <div>
             <img src={logo} alt="" width="50px" />
         </div>
