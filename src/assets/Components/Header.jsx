@@ -100,20 +100,20 @@ const Header = () => {
           <div className="w-full text-gray-400 flex flex-col items-end justify-start">
             <span className="font-light text-lg" style={{fontFamily: "var(--font-time)"}}>{formattedTime}</span>
     
-            <button className="min-w-30 relative overflow-hidden cursor-pointer text-gray-800 bg-gray-200 rounded-sm border-none px-2 h-6" onClick={() => setShowLocation(prev => !prev)}>
+            <button className="min-w-28 text-md relative overflow-hidden cursor-pointer text-gray-800 bg-gray-200 rounded-sm border-none px-2 h-6" onClick={() => setShowLocation(prev => !prev)}>
               <span
                 className={
-                  "flex items-center gap-1 px-1.5 absolute left-0 top-0 whitespace-nowrap transition-all duration-300 " +
+                  "flex items-center text-sm gap-1 px-1.5 absolute left-0 top-0.5 whitespace-nowrap transition-all duration-300 " +
                   (showLocation
                     ? "-translate-y-full opacity-0"
                     : "translate-y-0 opacity-100")
                 }>
-                <Pin className='w-4 h-4'/> Last Visited
+                <Pin className='w-3.5 h-3.5'/> Last Visited
               </span>
 
               <span
                 className={
-                  "absolute w-30 overflow-x-scroll flex left-0 top-0 px-1.5 whitespace-nowrap transition-all duration-300 " +
+                  "absolute w-30 overflow-x-scroll flex left-0 text-sm top-0.5 px-1.5 whitespace-nowrap transition-all duration-300 " +
                   (showLocation
                     ? "translate-y-0 opacity-100"
                     : "translate-y-full opacity-0")

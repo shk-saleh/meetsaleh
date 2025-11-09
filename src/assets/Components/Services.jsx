@@ -37,7 +37,7 @@ const SERVICES = [
 
 export default function Services() {
   return (
-    <div className="flex flex-col items-center justify-center w-full my-12 h-auto px-6">
+    <div className="flex flex-col items-center justify-center w-full py-12 h-auto px-6">
       {/* Header */}
       <div className='flex flex-col items-center gap-4 mb-16 md:mb-24 text-center'>
         <h1 className='text-3xl md:text-4xl text-[var(--primary-color)] font-normal'>

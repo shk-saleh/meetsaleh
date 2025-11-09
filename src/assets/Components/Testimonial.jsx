@@ -34,7 +34,7 @@ const Testimonial = () => {
 
     return (
 
-        <div className='max-w-7xl place-self-center py-8 md:py-22 px-6 md:px-20'>
+        <div className='max-w-7xl place-self-center py-8 md:py-12 px-6 md:px-20'>
 
             <h1 className='text-3xl md:text-4xl py-10 text-[var(--primary-color)] font-normal text-center'>
                 Words <span className='text-[var(--secondary-color)]'>that matter?</span>
