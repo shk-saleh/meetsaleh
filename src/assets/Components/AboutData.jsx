@@ -134,7 +134,7 @@
                     transition={{ duration: 0.6, delay: index * 0.2 }}
                     viewport={{ once: true }}
                     dangerouslySetInnerHTML={{ __html: line }}
-                    className='mb-3 text-justify'
+                    className='mb-3 text-justify leading-6 md:leading-7'
                     />
                 ))}
                 </div>

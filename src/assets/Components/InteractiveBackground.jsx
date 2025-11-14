@@ -11,7 +11,7 @@ const InteractiveBackground = () => {
             const starsContainer = starsRef.current;
             if (!starsContainer) return;
 
-            for (let i = 0; i < 30; i++) {
+            for (let i = 0; i < 20; i++) {
                 const star = document.createElement('div');
                 star.className = 'star';
                 
@@ -31,44 +31,16 @@ const InteractiveBackground = () => {
             }
         };
 
-        // Create floating blobs
-        const createBlobs = () => {
-            const blobContainer = blobContainerRef.current;
-            if (!blobContainer) return;
-
-            for (let i = 0; i < 2; i++) {
-                const blob = document.createElement('div');
-                blob.className = 'blob';
-                
-                // Random size
-                const size = Math.random() * 300 + 200;
-                blob.style.width = `${size}px`;
-                blob.style.height = `${size}px`;
-                
-                // Random position
-                blob.style.left = `${Math.random() * 100}%`;
-                blob.style.top = `${Math.random() * 100}%`;
-                
-                // Random animation duration
-                blob.style.setProperty('--duration', `${Math.random() * 10 + 10}s`);
-                
-                blobContainer.appendChild(blob);
-            }
-        };
-
         createStars();
-        createBlobs();
 
         return () => {
             if (starsRef.current) starsRef.current.innerHTML = '';
-            if (blobContainerRef.current) blobContainerRef.current.innerHTML = '';
         };
     }, []);
 
     return (
         <>
-            <div ref={starsRef} className="stars relative -z-50" />
-            {/* <div ref={blobContainerRef} className="blob-container relative -z-10" /> */}
+            <div ref={starsRef} className="stars relative z-0" />
         </>
     );
 };

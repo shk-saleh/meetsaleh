@@ -6,7 +6,7 @@ import {Link} from 'react-router-dom';
 const Main = () => {
   
   return (
-    <div className='relative flex flex-col-reverse md:flex-row  justify-center gap-10 items-center z-1 min-h-[75vh] md:px-28 px-6 pt-18 pb-0 md:pt-10'>
+    <div className='relative flex flex-col-reverse md:flex-row  justify-center gap-10 items-center z-50 min-h-[75vh] md:px-28 px-6 pt-18 pb-0 md:pt-10'>
         <div>
             <img src={headshot} className='border border-gray-500 bg-white/5 backdrop-blur-sm rounded-[10%] rotate-5 transition-all ease-linear hover:border-white hover:rotate-0 cursor-pointer my-10' alt="personal-img " width="285px"/>
         </div>
@@ -15,14 +15,14 @@ const Main = () => {
               <button className='flex items-center gap-2 bg-white/8 border border-gray-700 rounded-2xl md:text-sm text-xs text-[var(--primary-color)] px-3 py-1'>
                 <span class="relative flex size-2 md:size-3">
                   <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-orange-400 opacity-75"></span>
-                  <span class="relative inline-flex size-2 rounded-full bg-orange-500"></span>
+                  <span class="relative inline-flex size-2 md:size-3 rounded-full bg-orange-500"></span>
                 </span>
                 MERN Stack
               </button>
               <button className='flex items-center gap-2 bg-white/8 border border-gray-700 rounded-2xl md:text-sm text-xs text-[var(--primary-color)] px-3 py-1'>
                 <span class="relative flex size-2 md:size-3">
                   <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-yellow-400 opacity-75"></span>
-                  <span class="relative inline-flex size-2 rounded-full bg-yellow-500"></span>
+                  <span class="relative inline-flex size-2 md:size-3 rounded-full bg-yellow-500"></span>
                 </span>
                 UI/UX Designer
               </button>

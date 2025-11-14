@@ -33,10 +33,10 @@ const ProjectDetail = () => {
             <Link to='/projects'> <ChevronLeft className='bg-white/10 p-2 w-10 h-10 cursor-pointer rounded-full text-white' /></Link>
             <div>
               <span className='text-xs md:text-sm font-light text-gray-400'>{project.type}</span>
-              <h2 className='text-2xl md:text-3xl font-medium mb-6'>{project.projectName}</h2>
+              <h2 className='text-xl md:text-3xl font-medium'>{project.projectName}</h2>
             </div>
           </div>
-          <Link to='/' className='text-sm font-light bg-white/10 font-xl px-8 py-2 rounded-xl transition-all duration-300 cursor-pointer text-gray-400 hover:text-gray-200'>
+          <Link to='/' className='text-sm font-light bg-white/10 font-xl px-6 md:px-8 py-2 rounded-xl transition-all duration-300 cursor-pointer text-gray-400 hover:text-gray-200'>
              View 
           </Link>
         </div>
@@ -49,11 +49,11 @@ const ProjectDetail = () => {
           />
         </div>
         <div className='flex flex-col gap-6'>
-          <div className='flex gap-2'>
+          <div className='flex flex-wrap gap-2'>
             {project?.tag?.map((t, i) => (
               <span
                 key={i}
-                className="bg-[var(--fade-color)] border border-gray-600 rounded-3xl text-sm px-4 py-1"
+                className="bg-[var(--fade-color)] border border-gray-600 rounded-3xl text-xs md:text-sm px-4 py-1"
               >
                 {t}
               </span>

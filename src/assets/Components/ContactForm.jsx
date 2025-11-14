@@ -22,13 +22,13 @@ const ContactForm = () => {
             <div className='w-full'>
                 <form className="flex flex-col gap-6">
                     <div className="flex flex-col md:flex-row gap-6">
-                        <input type="text" placeholder="Your Name" className="w-full p-4 bg-[var(--input-bg)] border border-[var(--fade-color)] rounded-md text-gray-200 focus:outline-none focus:border-[var(--secondary-color)] transition"/>
-                        <input type="email" placeholder="Your Email" className="w-full p-4 bg-[var(--input-bg)] border border-[var(--fade-color)] rounded-md text-gray-200 focus:outline-none focus:border-[var(--secondary-color)] transition"/>
+                        <input type="text" placeholder="Your Name" className="w-full p-4 bg-[var(--input-bg)] border border-zinc-800 rounded-md text-gray-200 focus:outline-none focus:border-[var(--secondary-color)] transition"/>
+                        <input type="email" placeholder="Your Email" className="w-full p-4 bg-[var(--input-bg)] border border-zinc-800 rounded-md text-gray-200 focus:outline-none focus:border-[var(--secondary-color)] transition"/>
                     </div>
-                    <input type="text" placeholder="Subject" className="w-full p-4 bg-[var(--input-bg)] border border-[var(--fade-color)] rounded-md text-gray-200 focus:outline-none focus:border-[var(--secondary-color)] transition"/>
-                    <textarea rows="6" placeholder="Your Message" className="w-full p-4 bg-[var(--input-bg)] border border-[var(--fade-color)] rounded-md text-gray-200 focus:outline-none focus:border-[var(--secondary-color)] transition"></textarea>
-                    <button type="submit" className="flex w-70 justify-center items-center gap-6 px-6 py-3 bg-(--fade-color)/20  border border-gray-800 cursor-pointer text-(--primary-color) font-medium rounded-md hover
-                        transition">Send Message <SendHorizontal /> </button>
+                    <input type="text" placeholder="Subject" className="w-full p-4 bg-[var(--input-bg)] border border-zinc-800 rounded-md text-gray-200 focus:outline-none focus:border-[var(--secondary-color)] transition"/>
+                    <textarea rows="6" placeholder="Your Message" className="w-full p-4 bg-[var(--input-bg)] border border-zinc-800 rounded-md text-gray-200 focus:outline-none focus:border-[var(--secondary-color)] transition"></textarea>
+                    <button type="submit" className="group flex w-70 justify-center items-center gap-6 px-6 py-3 bg-white border border-zinc-800 cursor-pointer text-(--body-color) font-medium rounded-md hover
+                        transition">Send Message <SendHorizontal className='group-hover:translate-x-2 transition-all duration-200' /> </button>
                 </form>
             </div>
         </div>

@@ -10,7 +10,7 @@ const Scrollers = () => {
 
   return (
     <div className='relative overflow-hidden'>
-        <div className='bg-white/8 w-full p-4 my-20 rotate-4 md:rotate-3'>
+        <div className='bg-white/5 w-full p-4 my-20 rotate-4'>
             <Marquee speed={60}  className='flex flex-row w-full text-white text-lg'>
                 <div className="inline-flex items-center">
                     {services.map((item, index) => (
@@ -22,7 +22,7 @@ const Scrollers = () => {
                 </div>
             </Marquee>
         </div>
-        <div className='bg-black w-full p-4 my-20 absolute top-0 z-1 -rotate-6'>
+        <div className='bg-black w-full p-4 my-20 absolute top-0 z-1 -rotate-4'>
             <Marquee speed={60} direction="right" className='flex flex-row w-full text-white text-lg'>
                 <div className="inline-flex items-center">
                     {services.map((item, index) => (

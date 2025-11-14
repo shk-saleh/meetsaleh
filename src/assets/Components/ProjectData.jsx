@@ -8,7 +8,7 @@ const ProjectData = () => {
 
   return (
     <section className="max-w-6xl px-6 mx-0 md:mx-auto text-gray-200 py-12 md:py-18">
-        <div className="border-b border-[var(--fade-color)]">
+        <div className="border-b border-[var(--fade-color)] pb-10">
             <h2 className="text-3xl md:text-4xl font-medium mb-10">
             <span className="text-[var(--secondary-color)]">— </span>
                 Projects 
