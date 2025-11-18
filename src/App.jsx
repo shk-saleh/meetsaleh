@@ -1,5 +1,5 @@
 import { useRef, useEffect } from "react";
-import React , {useState} from "react";
+import React, { useState } from "react";
 import "./App.css";
 import { Game } from "./assets/Components/Game";
 import Navbar from "./assets/Components/Navbar";
@@ -11,9 +11,9 @@ import Project from "./assets/Pages/Project";
 import Lenis from "@studio-freight/lenis";
 import ProjectDetail from "./assets/Components/ProjectDetail";
 import Contact from "./assets/Pages/Contact";
+import { AnimatePresence } from "framer-motion";
 
-const App = () => {  
-
+const App = () => {
   const [loadingDone, setLoadingDone] = useState(false);
   const cursor1 = useRef(null);
   const cursor2 = useRef(null);
@@ -46,8 +46,18 @@ const App = () => {
 
   return (
     <>
-      <div className={`min-h-[100vh] h-auto w-full bg-[var(--body-color)] relative overflow-hidden ${!loadingDone ? 'opacity-0' : 'opacity-100'}`}>
-        <Navbar /> 
+      <AnimatePresence mode="wait">
+        {!loadingDone && (
+          <Loading 
+            key="loading" 
+            onFinish={() => setLoadingDone(true)} 
+          />
+        )}
+      </AnimatePresence>
+
+      {loadingDone && (
+        <div className="min-h-[100vh] h-auto w-full bg-[var(--body-color)] relative overflow-hidden">
+          <Navbar />
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/game" element={<Game />} />
@@ -57,10 +67,10 @@ const App = () => {
             <Route path="/contact" element={<Contact />} />
             <Route path="/*" element={<Game />} />
           </Routes>
-      </div>
-      {!loadingDone && <Loading onFinish={() => setLoadingDone(true)} />}
+        </div>
+      )}
     </>
   );
-}
+};
 
 export default App;

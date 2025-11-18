@@ -1,11 +1,10 @@
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { EffectCoverflow, Autoplay  } from 'swiper/modules';
+import { EffectCoverflow, Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import { motion } from "framer-motion";
 import { Send } from 'lucide-react';
-
 
 const SERVICES = [
   {
@@ -37,63 +36,80 @@ const SERVICES = [
 
 export default function Services() {
   return (
-    <div className=" relative z-50 flex flex-col items-center justify-center w-full py-12 h-auto px-6">
+    <motion.div 
+      className="relative z-50 flex flex-col items-center justify-center w-full py-12 h-auto px-6"
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.2 }}
+      transition={{ duration: 0.8, ease: "easeOut" }}
+    >
       {/* Header */}
-      <div className='flex flex-col items-center gap-4 mb-16 md:mb-24 text-center'>
+      <motion.div 
+        className='flex flex-col items-center gap-4 mb-16 md:mb-24 text-center'
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6, delay: 0.2 }}
+      >
         <h1 className='text-3xl md:text-4xl text-[var(--primary-color)] font-normal'>
           Solutions I <span className='text-[var(--secondary-color)] font-medium'>Provide?</span>
         </h1>
         <p className='text-sm text-[var(--primary-color)]/80 font-light'>
           Offering services in custom website development, design conversions, and performance optimization.
         </p>
-      </div>
+      </motion.div>
 
+      {/* Swiper without motion wrapper */}
       <Swiper
         effect={'coverflow'}
-        grabCursor={true}
-        centeredSlides={true}
-        slidesPerView={'auto'}
-        spaceBetween={20}
-        loop={true}
-        speed={1000}
-        autoplay={{
-          delay: 2000,
-          disableOnInteraction: false,
-          pauseOnMouseEnter: true,
-        }}
-        coverflowEffect={{
-          rotate: 50,      
-          stretch: 0,       
-          depth: 100,      
-          modifier: 1,   
-          slideShadows: true,
-        }}
-        modules={[EffectCoverflow, Autoplay]}
+        grabCursor={true}
+        centeredSlides={true}
+        slidesPerView={'auto'}
+        spaceBetween={20}
+        loop={true}
+        speed={1000}
+        autoplay={{
+          delay: 2000,
+          disableOnInteraction: false,
+          pauseOnMouseEnter: true,
+        }}
+        coverflowEffect={{
+          rotate: 50,      
+          stretch: 0,       
+          depth: 100,      
+          modifier: 1,   
+          slideShadows: true,
+        }}
+        modules={[EffectCoverflow, Autoplay]}
         className="w-full max-w-5xl mb-6"
       >
-        {SERVICES.map((service) => (
+        {SERVICES.map((service, index) => (
           <SwiperSlide
-            key={service.idx}
+            key={`${service.idx}-${index}`}
             className="flex justify-center !w-[310px]"
           >
             <Card {...service} />
           </SwiperSlide>
         ))}
       </Swiper>
-    </div>
+    </motion.div>
   );
 }
 
 function Card({ idx, title, desc }) {
   return (
-    <motion.div
-      className="w-full h-full flex flex-col gap-4 text-white border border-zinc-800 rounded-2xl bg-gradient-to-bl from-(--fade-color) via-(--secondary-color)/30 to-(--body-color)
-      py-8 px-6 shadow-2xl"
-    >
-      <span className="text-4xl h-10 w-10 md:w-14 md:h-14 flex justify-center items-center rounded-full font-bold bg-(--primary-color) text-(--body-color)">{idx}</span>
+    <div className="w-full h-full flex flex-col gap-4 text-white border border-zinc-800 rounded-2xl bg-gradient-to-bl from-(--fade-color) via-(--secondary-color)/30 to-(--body-color) py-8 px-6 shadow-2xl">
+      <span className="text-4xl h-10 w-10 md:w-14 md:h-14 flex justify-center items-center rounded-full font-bold bg-(--primary-color) text-(--body-color)">
+        {idx}
+      </span>
+      
       <div className="text-2xl font-semibold">{title}</div>
       <div className="text-(--subtext-color) text-sm font-light leading-relaxed">{desc}</div>
-      <button className='flex justify-center items-center border border-(--fade-color) bg-(--primary-color) text-(--body-color) rounded-lg py-2 w-auto shadow-lg'>Request Service <Send className='ms-5 w-5 h-5' /></button>
-    </motion.div>
+      
+      <button className='flex justify-center items-center border border-(--fade-color) bg-(--primary-color) text-(--body-color) rounded-lg py-2 w-auto shadow-lg'>
+        Request Service 
+        <Send className='ms-5 w-5 h-5' />
+      </button>
+    </div>
   );
 }
