@@ -46,29 +46,31 @@ const App = () => {
 
   return (
     <>
-      <AnimatePresence mode="wait">
+      {/* <AnimatePresence mode="wait">
         {!loadingDone && (
           <Loading 
             key="loading" 
             onFinish={() => setLoadingDone(true)} 
           />
         )}
-      </AnimatePresence>
+      </AnimatePresence> */}
 
-      {loadingDone && (
-        <div className="min-h-[100vh] h-auto w-full bg-[var(--body-color)] relative overflow-hidden">
-          <Navbar />
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/game" element={<Game />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/projects" element={<Project />} />
-            <Route path="/projects/:slug" element={<ProjectDetail />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/*" element={<Game />} />
-          </Routes>
+      {/* {loadingDone && ( */}
+        <div className="p-3 h-full w-full bg-(--body-color) relative overflow-y-auto scrollbar-hide">
+          <div className="relative overflow-hidden bg-black flex flex-col justify-start w-[100%] min-h-[98vh] h-auto rounded-4xl">
+            <Navbar />
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/game" element={<Game />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/projects" element={<Project />} />
+              <Route path="/projects/:slug" element={<ProjectDetail />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="/*" element={<Game />} />
+            </Routes>
+          </div>
         </div>
-      )}
+      {/* )} */}
     </>
   );
 };

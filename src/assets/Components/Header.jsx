@@ -6,6 +6,7 @@ import { Grip, X } from 'lucide-react';
 import TextTransition, { presets } from 'react-text-transition';
 
 const Header = () => {
+
   const [showNav, setShowNav] = useState(false);
   const [index, setIndex] = React.useState(0);
   const [flipped, setFlipped] = useState(false);
@@ -126,7 +127,7 @@ const Header = () => {
 
   return (
     <motion.header 
-      className='w-full flex items-center justify-between px-6 md:px-14 py-6'
+      className='absolute top-4 z-50 w-full flex items-center justify-between px-6 md:px-14 py-6'
       variants={headerVariants}
       initial="hidden"
       animate="visible"
@@ -164,7 +165,7 @@ const Header = () => {
               className="min-w-28 text-md relative overflow-hidden cursor-pointer text-gray-800 bg-gray-200 rounded-sm border-none px-2 h-6" 
               onClick={() => setShowLocation(prev => !prev)}
               whileHover={{ 
-                scale: 1.05,
+                scale: 1.02,
                 boxShadow: "0 4px 12px rgba(255, 255, 255, 0.2)"
               }}
               whileTap={{ scale: 0.95 }}
