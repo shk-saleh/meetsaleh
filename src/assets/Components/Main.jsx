@@ -53,15 +53,15 @@ const Main = () => {
         {/* Main heading with character animation */}
         <div className='flex gap-3 items-center justify-center mb-4'>
           <motion.h3
-            className='relative flex items-center justify-center text-3xl md:text-7xl text-(--primary-color) leading-none font-medium'
+            className='relative flex items-end justify-center text-2xl md:text-6xl text-grad-gray leading-none font-medium'
             variants={fadeUpVariants}
           >
-            <span className='text-grad-gray opacity-40'> Hi! I'm</span>
+            <span> Hi! I'm</span>
 
             <div className='group relative'>
               <img
                 src={headshot}
-                className='w-22 h-22 mx-4 object-cover border border-zinc-800 bg-(--fade-color) backdrop-blur-sm rounded-2xl cursor-pointer transition-all'
+                className='w-16 h-16 md:w-22 md:h-22 mx-4 object-cover border border-zinc-800 bg-(--fade-color) backdrop-blur-sm rounded-lg md:rounded-2xl cursor-pointer transition-all'
                 style={{ boxShadow: "0px 0px 14px 2px rgb(40, 40, 40)" }}
               />
 
@@ -75,7 +75,7 @@ const Main = () => {
           </motion.h3>
         </div>
         <motion.h1
-          className='max-w-5xl text-3xl md:text-7xl text-center text-(--primary-color) leading-none font-medium pb-2'
+          className='max-w-5xl text-4xl md:text-7xl text-center text-(--primary-color) leading-none font-medium pb-2'
           variants={fadeUpVariants}
         >
           Engineered SaaS products that turn Users into <span
@@ -89,7 +89,7 @@ const Main = () => {
 
         {/* Subtitle */}
         <motion.span
-          className='max-w-3xl text-center text-md md:text-md text-(--subtext-color) font-light'
+          className='max-w-3xl text-center md:py-0 py-4 text-sm md:text-md text-(--subtext-color) font-light'
           variants={fadeUpVariants}
         >
           From Figma and UX strategy to full-stack development and deployment. I handle everything so founders can launch faster without hiring multiple teams.
@@ -97,10 +97,10 @@ const Main = () => {
 
         {/* CTA and social links */}
         <motion.div
-          className='flex gap-5 items-center h-10 pt-10'
+          className='flex gap-3 items-center h-auto md:pt-10 pt-4'
           variants={fadeUpVariants}
         >
-          <button className="main-button">
+          <button className="main-button text-xs md:text-sm">
             <svg viewBox="0 0 24 24" className="arr-2" xmlns="http://www.w3.org/2000/svg">
               <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path>
             </svg>
@@ -121,7 +121,7 @@ const Main = () => {
                 whileTap={{ scale: 0.9 }}
                 transition={{ type: "spring", stiffness: 300 }}
               >
-                <Instagram className='w-6 h-6 text-(--primary-color)/70 transition ease-linear cursor-pointer duration-300' />
+                <Instagram className='md:w-6 md:h-6 h-4 w-4 text-(--primary-color)/70 transition ease-linear cursor-pointer duration-300' />
               </motion.div>
             </Link>
             <Link to='https://www.linkedin.com/in/mohdsaleh18/' target='blank' className='bg-(--fade-color) rounded-full p-2 -ms-5 shadow-sm shadow-zinc-500'>
@@ -132,7 +132,7 @@ const Main = () => {
                 whileTap={{ scale: 0.9 }}
                 transition={{ type: "spring", stiffness: 300 }}
               >
-                <Linkedin className='w-6 h-6 text-(--primary-color)/70 transition ease-linear cursor-pointer duration-300' />
+                <Linkedin className='md:w-6 md:h-6 h-4 w-4 text-(--primary-color)/70 transition ease-linear cursor-pointer duration-300' />
               </motion.div>
             </Link>
             <Link to='https://github.com/shk-saleh' target='blank' className='bg-(--fade-color) rounded-full p-2 -ms-5 shadow-sm shadow-zinc-500'>
@@ -143,7 +143,7 @@ const Main = () => {
                 whileTap={{ scale: 0.9 }}
                 transition={{ type: "spring", stiffness: 300 }}
               >
-                <Github className='w-6 h-6 text-(--primary-color)/70 transition ease-linear cursor-pointer duration-300' />
+                <Github className='md:w-6 md:h-6 h-4 w-4 text-(--primary-color)/70 transition ease-linear cursor-pointer duration-300' />
               </motion.div>
             </Link>
           </div>

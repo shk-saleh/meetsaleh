@@ -127,7 +127,7 @@ const Header = () => {
 
   return (
     <motion.header 
-      className='absolute top-4 z-50 w-full flex items-center justify-between px-6 md:px-14 py-6'
+      className='absolute md:top-4 top-0 z-50 w-full flex items-center justify-between px-6 md:px-14 py-6'
       variants={headerVariants}
       initial="hidden"
       animate="visible"
@@ -142,7 +142,7 @@ const Header = () => {
           }}
           whileTap={{ scale: 0.9 }}
         >
-            <img src={logo} alt="" width="50px" />
+            <img src={logo} alt="" width="44px" />
         </motion.div>
 
         {/* Time and Location Section */}
@@ -162,7 +162,7 @@ const Header = () => {
     
             {/* Location Toggle Button with Flip Animation */}
             <motion.button 
-              className="min-w-28 text-md relative overflow-hidden cursor-pointer text-gray-800 bg-gray-200 rounded-sm border-none px-2 h-6" 
+              className="flex items-center justify-center min-w-24 text-xs md:text-sm relative overflow-hidden cursor-pointer text-gray-800 bg-gray-200 rounded-sm border-none px-2 py-2 h-5" 
               onClick={() => setShowLocation(prev => !prev)}
               whileHover={{ 
                 scale: 1.02,
@@ -174,7 +174,7 @@ const Header = () => {
                 {!showLocation ? (
                   <motion.span
                     key="last-visited"
-                    className="flex items-center text-sm gap-1 px-1.5 absolute left-0 top-0.5 whitespace-nowrap"
+                    className="flex items-center text-xs md:text-sm gap-1 px-1.5 absolute left-0 top-0.5 whitespace-nowrap"
                     initial={{ y: 20, opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
                     exit={{ y: -20, opacity: 0 }}

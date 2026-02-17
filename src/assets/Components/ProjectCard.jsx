@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 const ProjectCard = ({id, slug, type, projectName, projectThumb}) => {
 
   return (
-    <div className='relative bg-gradient-to-b from-(--body-color) to-(--fade-color)/90 border border-zinc-800 pt-4 ps-4 pe-4 md:p-6 pb-1 rounded-xl cursor-pointer'>
+    <div className='relative bg-gradient-to-b from-(--body-color) to-(--color-dull) border border-zinc-800 pt-4 ps-4 pe-4 md:p-6 pb-1 rounded-xl cursor-pointer'>
         <span className='text-xs md:text-sm text-gray-500 font-light'>{type}</span>
         <h2 className='text-xl md:text-2xl mb-1 md:mb-6'>{projectName}</h2>
         <div className='masked'>

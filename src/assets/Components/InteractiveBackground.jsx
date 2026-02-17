@@ -11,7 +11,7 @@ const InteractiveBackground = () => {
             const starsContainer = starsRef.current;
             if (!starsContainer) return;
 
-            for (let i = 0; i < 20; i++) {
+            for (let i = 0; i < 12; i++) {
                 const star = document.createElement('div');
                 star.className = 'star';
                 

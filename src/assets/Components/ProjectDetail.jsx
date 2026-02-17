@@ -33,7 +33,7 @@ const ProjectDetail = () => {
             <Link to='/projects'> <ChevronLeft className='bg-white/10 p-2 w-10 h-10 cursor-pointer rounded-full text-white' /></Link>
             <div>
               <span className='text-xs md:text-sm font-light text-gray-400'>{project.type}</span>
-              <h2 className='text-xl md:text-3xl font-medium'>{project.projectName}</h2>
+              <h2 className='text-xl md:text-3xl font-medium text-(--primary-color)'>{project.projectName}</h2>
             </div>
           </div>
           <Link to='/' className='text-sm font-light bg-white/10 font-xl px-6 md:px-8 py-2 rounded-xl transition-all duration-300 cursor-pointer text-gray-400 hover:text-gray-200'>
@@ -53,7 +53,7 @@ const ProjectDetail = () => {
             {project?.tag?.map((t, i) => (
               <span
                 key={i}
-                className="bg-[var(--fade-color)] border border-gray-600 rounded-3xl text-xs md:text-sm px-4 py-1"
+                className="bg-[var(--fade-color)] text-(--primary-color) border border-gray-600 rounded-3xl text-xs md:text-sm px-4 py-1"
               >
                 {t}
               </span>
@@ -61,15 +61,15 @@ const ProjectDetail = () => {
           </div>
           <p className='text-md leading-relaxed font-light text-zinc-400'>{project.projectDesc}</p>
           <div>
-            <h3 className='text-2xl mb-2'>Project Detail</h3>
+            <h3 className='text-2xl mb-2 text-(--primary-color) border-b border-(--fade-color) py-2'>Project Detail</h3>
             <p className='text-md leading-relaxed font-light text-zinc-400' dangerouslySetInnerHTML={{ __html: project.features }}></p>
           </div>
           <div>
-            <h3 className='text-2xl mb-2'>Design Process</h3>
+            <h3 className='text-2xl mb-2 text-(--primary-color) border-b border-(--fade-color) py-2'>Design Process</h3>
             <p className='text-md leading-relaxed font-light text-zinc-400' dangerouslySetInnerHTML={{ __html: project.process }}></p>
           </div>
           <div>
-            <h3 className='text-2xl mb-2'>Outcomes</h3>
+            <h3 className='text-2xl mb-2 text-(--primary-color) border-b border-(--fade-color) py-2'>Outcomes</h3>
             <p className='text-md leading-relaxed font-light text-zinc-400'>{project.outcomes}</p>
           </div>
         </div>

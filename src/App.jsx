@@ -46,18 +46,18 @@ const App = () => {
 
   return (
     <>
-      {/* <AnimatePresence mode="wait">
+      <AnimatePresence mode="wait">
         {!loadingDone && (
           <Loading 
             key="loading" 
             onFinish={() => setLoadingDone(true)} 
           />
         )}
-      </AnimatePresence> */}
+      </AnimatePresence>
 
-      {/* {loadingDone && ( */}
+      {loadingDone && (
         <div className="p-3 h-full w-full bg-(--body-color) relative overflow-y-auto scrollbar-hide">
-          <div className="relative overflow-hidden bg-black flex flex-col justify-start w-[100%] min-h-[98vh] h-auto rounded-4xl">
+          <div className="relative overflow-hidden bg-black flex flex-col justify-start w-[100%] min-h-[98vh] h-auto md:rounded-4xl rounded-xl">
             <Navbar />
             <Routes>
               <Route path="/" element={<Home />} />
@@ -70,7 +70,7 @@ const App = () => {
             </Routes>
           </div>
         </div>
-      {/* )} */}
+       )}
     </>
   );
 };

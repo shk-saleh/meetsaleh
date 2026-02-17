@@ -21,11 +21,11 @@ const Home = () => {
           <rect width="100%" height="100%" fill="#ffffff" filter="url(#noise)" />
         </svg>
         <Hero/>
+        {/* <Scrollers/> */}
         <ProjectSlider/>
-        <Scrollers/>
         <Services/>
-        {/* <CTA/>
-        <Footer/> */} 
+        <CTA/>
+        <Footer/> 
         <InteractiveBackground />
     </div>
   )

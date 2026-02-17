@@ -10,8 +10,8 @@ const Navbar = () => {
     { icon: <Home size={22}  className='text-white' />, label: 'Home', onClick: () => navigate('/') },
     { icon: <ScrollText size={22}  className='text-white' />, label: 'My Story', onClick: () => navigate('/about') },
     { icon: <Briefcase size={22}  className='text-white' />, label: 'Projects', onClick: () => navigate('/projects') },
-    { icon: <CalendarDays size={22}  className='text-white' />, label: 'Book a Call', onClick: () => navigate('/') },
-  ];
+    { icon: <CalendarDays size={22}  className='text-white' />, label: 'Book a Call', onClick: () => window.open("https://cal.com/mohdsaleh18", "_blank")}
+  ];  
 
   return (
     <div className='w-full fixed bottom-0 left-0 z-100 bg-gradient-to-b from-black/0 to-black' > 

@@ -17,7 +17,7 @@
     --fade-color: #1f1f1f;
     --primary-color: #ffff;
     --secondary-color: oklch(70.5% 0.213 47.604);
-    --subtext-color: #757575;
+    --subtext-color: #838383;
     --radius: 0.625rem;
     --background: oklch(1 0 0);
     --foreground: oklch(0.145 0 0);
@@ -106,7 +106,7 @@ body{
   padding: 5px 25px;
   border: 3px solid;
   border-color: transparent;
-  font-size: 16px;
+  /* font-size: 12px; */
   background-color: inherit;
   border-radius: 10px;
   font-weight: 600;
@@ -224,7 +224,7 @@ body{
 }
 
 .text-grad-orange{
-  background: linear-gradient(90deg, #ffe4c6, #ff8800, #914e00);
+  background: linear-gradient(90deg, #ffe4c6, rgb(255, 136, 0), #914e00);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }

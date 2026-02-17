@@ -12,20 +12,20 @@ const Scrollers = () => {
 
     return (
         <motion.div 
-            className='relative py-20'
+            className='relative pb-10 bg-zinc-900 rounded-xl mx-20 mt-30'
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.8 }}
         >
-            {/* First Marquee */}
-            <div className='w-full flex items-center p-2 rounded-3xl opacity-5'>
+            {/* First Marquee */} 
+            <div className='w-full flex items-center p-2 rounded-3xl opacity-5 -mb-26'>
                 <Marquee speed={50} className='flex flex-row w-full text-white text-lg'>
                     <div className="inline-flex items-center">
                         {services.map((item, index) => (
-                            <div key={index} className="flex items-center space-x-1">
-                                <Sparkle className="text-(--secondary-color) w-10 h-10" />
-                                <span className='pe-5 text-(--primary-color) text-5xl'>{item}</span>
+                            <div key={index} className="flex items-center space-x-3">
+                                <Sparkle className="text-(--primary-color) w-10 h-10 fill-(--primary-color)" />
+                                <span className=' pe-5 text-(--primary-color) text-9xl'>{item}</span>
                             </div>
                         ))}
                     </div>
@@ -36,9 +36,9 @@ const Scrollers = () => {
                 <Marquee speed={50} direction="right" className='flex flex-row w-full text-white text-lg'>
                     <div className="inline-flex items-center">
                         {services.map((item, index) => (
-                            <div key={index} className="flex items-center space-x-1">
-                                <Sparkle className="text-(--secondary-color) w-10 h-10" />
-                                <span className='pe-5 text-(--primary-color) text-5xl'>{item}</span>
+                            <div key={index} className="flex items-center space-x-3">
+                                <Sparkle className="text-(--primary-color) w-10 h-10 fill-(--primary-color)" />
+                                <span className=' pe-5 text-(--primary-color) text-6xl'>{item}</span>
                             </div>
                         ))}
                     </div>
