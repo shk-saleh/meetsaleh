@@ -1,26 +1,31 @@
 import React from 'react'
-import Navbar from '../Components/Navbar'
-import Main from '../Components/Main'
 import Header from '../Components/Header'
 import Scrollers from '../Components/Scrollers'
 import CTA from '../Components/CTA'
 import Footer from '../Components/Footer'
 import Services from '../Components/Services'
 import InteractiveBackground from '../Components/InteractiveBackground'
+import Hero from '../Components/Hero'
+import ProjectSlider from '../Components/ProjectSlider'
 
 
 const Home = () => {
   return (
-    <div className='flex flex-col w-[100%] min-h-[100vh]'>
-      {/* <div className="absolute bottom-0 left-0 right-0 top-0 h-[700px] bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:20px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]"></div> */}
-        {/* Interactive Background */}
+    <div>
         <Header/>
-        <Main/>
-        <Navbar/>
-        <Scrollers/>
+        <svg className="absolute inset-0 w-full h-full pointer-events-none opacity-12">
+          <filter id="noise">
+            <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="4" />
+            <feColorMatrix type="saturate" values="0" />
+          </filter>
+          <rect width="100%" height="100%" fill="#ffffff" filter="url(#noise)" />
+        </svg>
+        <Hero/>
+        {/* <Scrollers/> */}
+        <ProjectSlider/>
         <Services/>
         <CTA/>
-        <Footer/>
+        <Footer/> 
         <InteractiveBackground />
     </div>
   )

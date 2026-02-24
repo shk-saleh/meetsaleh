@@ -1,10 +1,13 @@
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { EffectCoverflow, Autoplay } from 'swiper/modules';
+import { EffectCoverflow, Autoplay, Navigation } from 'swiper/modules';
+import 'swiper/css/navigation';
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import { motion } from "framer-motion";
-import { Send } from 'lucide-react';
+import { ArrowBigLeftDash, ArrowBigRightDash, Redo, Send, Undo } from 'lucide-react';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
+import SpotlightCard from '../Components/ReactBits/SpotlightCard';
 
 const SERVICES = [
   {
@@ -36,57 +39,81 @@ const SERVICES = [
 
 export default function Services() {
   return (
-    <motion.div 
-      className="relative z-50 flex flex-col items-center justify-center w-full py-12 h-auto px-6"
+    <motion.div
+      className="relative z-50 flex flex-col items-center justify-center w-full py-12 h-auto px-6 md:mt-0 -mt-10"
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.2 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
     >
       {/* Header */}
-      <motion.div 
+      <motion.div
         className='flex flex-col items-center gap-4 mb-16 md:mb-24 text-center'
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6, delay: 0.2 }}
       >
-        <h1 className='text-3xl md:text-4xl text-[var(--primary-color)] font-normal'>
-          Solutions I <span className='text-[var(--secondary-color)] font-medium'>Provide?</span>
+        <h1 className='text-3xl md:text-6xl text-[var(--primary-color)] font-normal md:mb-1'>
+          Solutions I <span className='text-grad-orange' style={{ fontFamily: "Playfair Display", fontStyle: "italic", fontWeight: "500" }}>Provide!</span>
         </h1>
-        <p className='text-sm text-[var(--primary-color)]/80 font-light'>
+        <p className='text-xs md:text-md text-(--subtext-color) font-light'>
           Offering services in custom website development, design conversions, and performance optimization.
         </p>
       </motion.div>
 
-      {/* Swiper without motion wrapper */}
+      <button className="swiper-button-prev-custom absolute md:left-[46%] left-[36%] bottom-0 z-50 w-12 h-12 rounded-full bg-(--primary-color)/70 hover:bg-(--primary-color) text-(--body-color) flex items-center justify-center shadow-lg hover:scale-105 transition cursor-pointer">
+        <ArrowBigLeftDash className="w-6 h-6" />
+      </button>
+      <button className="swiper-button-next-custom absolute md:right-[46%] right-[36%] bottom-0 z-50 w-12 h-12 rounded-full bg-(--primary-color)/70 hover:bg-(--primary-color) text-(--body-color) flex items-center justify-center shadow-lg hover:scale-105 transition cursor-pointer">
+        <ArrowBigRightDash className="w-6 h-6" />
+      </button>
+
+      {/* Swiper*/}
       <Swiper
         effect={'coverflow'}
-        grabCursor={true}
-        centeredSlides={true}
-        slidesPerView={'auto'}
-        spaceBetween={20}
-        loop={true}
-        speed={1000}
-        autoplay={{
-          delay: 2000,
-          disableOnInteraction: false,
-          pauseOnMouseEnter: true,
-        }}
-        coverflowEffect={{
-          rotate: 50,      
-          stretch: 0,       
-          depth: 100,      
-          modifier: 1,   
-          slideShadows: true,
-        }}
-        modules={[EffectCoverflow, Autoplay]}
-        className="w-full max-w-5xl mb-6"
+        grabCursor={true}
+        centeredSlides={true}
+        loop={true}
+        speed={1000}
+        autoplay={{
+          delay: 2000,
+          disableOnInteraction: false,
+          pauseOnMouseEnter: true,
+        }}
+        coverflowEffect={{
+          rotate: 50,
+          stretch: 0,
+          depth: 100,
+          modifier: 1,
+          slideShadows: true,
+        }}
+        navigation={{
+          prevEl: '.swiper-button-prev-custom',
+          nextEl: '.swiper-button-next-custom',
+        }}
+        breakpoints={{
+          0: {
+            slidesPerView: 1,
+          },
+          640: {
+            slidesPerView: 1,
+          },
+          768: {
+            slidesPerView: 2,
+          },
+          1024: {
+            slidesPerView: 3,
+          },
+        }}
+        modules={[EffectCoverflow, Autoplay, Navigation]}
+        className="md:max-w-6xl max-w-xs mb-12 relative md:!right-10 right-4"
       >
+
         {SERVICES.map((service, index) => (
           <SwiperSlide
             key={`${service.idx}-${index}`}
-            className="flex justify-center !w-[310px]"
+            className="flex justify-center w-auto h-auto md:!w-[380px] md:!h-[400px]"
           >
             <Card {...service} />
           </SwiperSlide>
@@ -98,18 +125,18 @@ export default function Services() {
 
 function Card({ idx, title, desc }) {
   return (
-    <div className="w-full h-full flex flex-col gap-4 text-white border border-zinc-800 rounded-2xl bg-gradient-to-bl from-(--fade-color) via-(--secondary-color)/30 to-(--body-color) py-8 px-6 shadow-2xl">
-      <span className="text-4xl h-10 w-10 md:w-14 md:h-14 flex justify-center items-center rounded-full font-bold bg-(--primary-color) text-(--body-color)">
-        {idx}
-      </span>
-      
-      <div className="text-2xl font-semibold">{title}</div>
-      <div className="text-(--subtext-color) text-sm font-light leading-relaxed">{desc}</div>
-      
-      <button className='flex justify-center items-center border border-(--fade-color) bg-(--primary-color) text-(--body-color) rounded-lg py-2 w-auto shadow-lg'>
-        Request Service 
+    <SpotlightCard className="w-full h-full flex flex-col justify-between gap-4 text-white border border-zinc-800 rounded-2xl bg-gradient-to-bl from-(--body-color) to-(--secondary-color)/20 py-8 px-6 shadow-2xl" spotlightColor="rgba(255, 136, 0, 0.3)">
+      <div>
+        <span className="text-4xl h-10 w-10 md:w-14 md:h-14 flex justify-center items-center rounded-full font-bold bg-(--primary-color) text-(--body-color) mb-4">
+          {idx}
+        </span>
+        <div className="text-2xl font-semibold mb-2">{title}</div>
+        <div className="text-(--subtext-color) text-sm font-normal leading-relaxed">{desc}</div>
+      </div>
+      <button className='flex justify-center items-center border border-(--fade-color) bg-(--primary-color) text-(--body-color) rounded-lg py-2 w-auto shadow-lg cursor-pointer'>
+        Request Service
         <Send className='ms-5 w-5 h-5' />
       </button>
-    </div>
+    </SpotlightCard>
   );
 }

@@ -21,13 +21,13 @@ const Footer = () => {
         </motion.h2>
 
         <motion.span 
-          className='text-md md:text-lg absolute bottom-25 opacity-15'
+          className='text-(--primary-color) text-xs md:text-lg absolute bottom-25 opacity-15'
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 0.15, y: 0 }}
           viewport={{ once: true, amount: 0.5 }}
           transition={{ duration: 0.8, delay: 0.3 }}
         >
-          &copy; copyright reversed 2025 | Made with ❤️
+          &copy; copyright reversed 2026 | Made with ❤️
         </motion.span>
     </motion.div>
   )
