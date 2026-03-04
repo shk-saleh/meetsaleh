@@ -1,6 +1,6 @@
 import {React , useState , useEffect} from 'react';
 import Marquee from "react-fast-marquee";
-// import reviewAvatar from '../Images/review-avatar.png';
+// import reviewAvatar from '../Images/review-avatar.webp';
 import { Linkedin, UserCircle } from "lucide-react";
 
     

@@ -1,6 +1,6 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import headshot from '../Images/personal-img.png'
+import headshot from '../Images/personal-img.webp'
 import { Hand, UsersRound, Facebook, Instagram, Linkedin, Github, SplinePointer, MousePointer2 } from "lucide-react";
 import { Link } from 'react-router-dom';
 

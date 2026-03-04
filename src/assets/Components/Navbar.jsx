@@ -10,7 +10,7 @@ const Navbar = () => {
     { icon: <Home size={22}  className='text-white' />, label: 'Home', onClick: () => navigate('/') },
     { icon: <ScrollText size={22}  className='text-white' />, label: 'My Story', onClick: () => navigate('/about') },
     { icon: <Briefcase size={22}  className='text-white' />, label: 'Projects', onClick: () => navigate('/projects') },
-    { icon: <CalendarDays size={22}  className='text-white' />, label: 'Book a Call', onClick: () => window.open("https://cal.com/mohdsaleh18", "_blank")}
+    { icon: <CalendarDays size={22}  className='text-white' />, label: 'Book a Call', onClick: () => window.open("https://cal.com/mohdsaleh18")}
   ];  
 
   return (
