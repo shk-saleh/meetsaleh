@@ -1,10 +1,10 @@
 import { Camera, Mesh, Plane, Program, Renderer, Texture, Transform } from 'ogl';
 import { useEffect, useRef } from 'react';
-import project1 from '../../Images/project-thumb-1.png'
-import project2 from '../../Images/project-thumb-2.png'
-import project3 from '../../Images/project-thumb-3.png'
-import project4 from '../../Images/project-thumb-4.png'
-import project5 from '../../Images/project-thumb-5.png'
+import project1 from '../../Images/project-thumb-1.webp'
+import project2 from '../../Images/project-thumb-2.webp'
+import project3 from '../../Images/project-thumb-3.webp'
+import project4 from '../../Images/project-thumb-4.webp'
+import project5 from '../../Images/project-thumb-5.webp'
 
 function debounce(func, wait) {
   let timeout;
