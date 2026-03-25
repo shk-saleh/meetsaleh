@@ -13,7 +13,7 @@ import ProjectDetail from "./assets/Components/ProjectDetail";
 import Contact from "./assets/Pages/Contact";
 import { AnimatePresence } from "framer-motion";
 import { Analytics } from "@vercel/analytics/react";  
-import { SpeedInsights } from "@vercel/speed-insights/next"
+import { SpeedInsights } from "@vercel/speed-insights/react"
 
 
 const App = () => {
