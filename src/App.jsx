@@ -17,6 +17,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next"
 
 
 const App = () => {
+  
   const [loadingDone, setLoadingDone] = useState(false);
   const cursor1 = useRef(null);
   const cursor2 = useRef(null);
