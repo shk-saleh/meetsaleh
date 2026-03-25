@@ -12,6 +12,7 @@ import Lenis from "@studio-freight/lenis";
 import ProjectDetail from "./assets/Components/ProjectDetail";
 import Contact from "./assets/Pages/Contact";
 import { AnimatePresence } from "framer-motion";
+import { Analytics } from "@vercel/analytics/react";
 
 const App = () => {
   const [loadingDone, setLoadingDone] = useState(false);
@@ -71,6 +72,7 @@ const App = () => {
           </div>
         </div>
        )}
+      <Analytics />
     </>
   );
 };
